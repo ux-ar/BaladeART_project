@@ -1,0 +1,15 @@
+.title {
+    background-color: rgba(82, 253, 109, 0);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    color: rgb(255, 107, 107);
+    -unity-text-align: upper-center;
+    font-size: 89px;
+}
+
+.unity-toggle {
+}
+
+.unity-toggle-custom {
+    width: 100px;
+    height: 100px;
+}
