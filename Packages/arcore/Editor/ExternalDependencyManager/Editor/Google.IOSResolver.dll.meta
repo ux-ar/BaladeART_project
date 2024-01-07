@@ -1,16 +1,23 @@
+fileFormatVersion: 2
+guid: 8b333f9c2c3c4d5c94788fa0722edc5c
+labels:
+- gvh
+- gvh_version-1.2.175
+- gvhp_exportpath-ExternalDependencyManager/Editor/1.2.175/Google.IOSResolver.dll
+- gvhp_targets-editor
 PluginImporter:
-  assetBundleName:
-  assetBundleVariant:
-  defineConstraints: []
-  executionOrder: {}
   externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
-  isExplicitlyReferenced: 0
-  isOverridable: 0
+  executionOrder: {}
+  defineConstraints: []
   isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
   - first:
-      Any:
+      Any: 
     second:
       enabled: 0
       settings: {}
@@ -26,13 +33,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: AnyCPU
-  serializedVersion: 2
-  userData:
-  validateReferences: 1
-fileFormatVersion: 2
-guid: 8b333f9c2c3c4d5c94788fa0722edc5c
-labels:
-- gvh
-- gvh_version-1.2.175
-- gvhp_exportpath-ExternalDependencyManager/Editor/1.2.175/Google.IOSResolver.dll
-- gvhp_targets-editor
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
