@@ -1,0 +1,65 @@
+.title {
+    color: rgb(96, 140, 143);
+    -unity-text-align: upper-center;
+    font-size: 89px;
+    -unity-font: url('project://database/Assets/UI/Fonts/Josefin_Sans/static/JosefinSans-Medium.ttf?fileID=12800000&guid=3f02da7f9249243499abd4de04795db2&type=3#JosefinSans-Medium');
+    -unity-font-definition: initial;
+}
+
+Toggle .unity-toggle__checkmark {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgb(189, 189, 255);
+}
+Toggle:checked .unity-toggle__checkmark {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border-bottom-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    background-color: rgb(96, 140, 143);
+    color: rgb(96, 140, 143);
+}
+Toggle .unity-toggle__label {
+    color: rgb(189, 189, 255);
+}
+Toggle:checked .unity-toggle__label {
+    color: rgb(96, 140, 143);
+}
+
+
+.unity-toggle {
+}
+
+.unity-toggle-custom {
+    width: 100px;
+    height: 100px;
+}
+
+.ui_rect_bordered {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    border-left-color: rgb(189, 189, 255);
+    border-right-color: rgb(189, 189, 255);
+    border-top-color: rgb(189, 189, 255);
+    border-bottom-color: rgb(189, 189, 255);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 39px;
+    border-top-right-radius: 39px;
+    border-bottom-right-radius: 39px;
+    border-bottom-left-radius: 39px;
+    padding-top: 22px;
+    padding-right: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+}
