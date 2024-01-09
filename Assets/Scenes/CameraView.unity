@@ -337,29 +337,25 @@ MonoBehaviour:
   latitude: 0
   longitude: 0
   arObjectDataList:
-  - latitude: 48.79102
-    longitude: 2.539649
-    arObjectPrefab: {fileID: 919132149155446097, guid: 9224ed1635f46d249a555e3caf877d7d,
+  - latitude: 48.89357
+    longitude: 2.2386577
+    arObjectPrefab: {fileID: 919132149155446097, guid: 7bcc96e1df47e1545a23b754b5a9bf86,
       type: 3}
-  - latitude: 48.79105
-    longitude: 2.539681
-    arObjectPrefab: {fileID: 919132149155446097, guid: 75cb275ecb2317149b41865c8f5e1db8,
+  - latitude: 48.89246
+    longitude: 2.237096
+    arObjectPrefab: {fileID: 919132149155446097, guid: f99e653ab54a7f04192c3c058652e1fe,
       type: 3}
-  - latitude: 48.79095
-    longitude: 2.540212
-    arObjectPrefab: {fileID: 919132149155446097, guid: 4465ee54e8c17da4389674f9ad879042,
+  - latitude: 48.89589
+    longitude: 2.2364857
+    arObjectPrefab: {fileID: 919132149155446097, guid: a8041b2124767594996adc34e21282b2,
       type: 3}
   - latitude: 48.79119
     longitude: 2.539281
-    arObjectPrefab: {fileID: 919132149155446097, guid: f321136da214f8a4891dd77c4c7e01ba,
+    arObjectPrefab: {fileID: 919132149155446097, guid: b71c07c82f34af540b133f70bca358fb,
       type: 3}
   - latitude: 48.79115
     longitude: 2.538981
-    arObjectPrefab: {fileID: 919132149155446097, guid: c18d1c5d1d6ce514d89e3a8a2f6be069,
-      type: 3}
-  - latitude: 48.79101
-    longitude: 2.539381
-    arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
+    arObjectPrefab: {fileID: 919132149155446097, guid: 92dd53c9506f41649890cac48d9f402e,
       type: 3}
   arObjectContainer: {fileID: 0}
   displayDistance: 10
@@ -842,10 +838,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1557566204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439488274
 MonoBehaviour:
@@ -860,7 +856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

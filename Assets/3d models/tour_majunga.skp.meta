@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c18d1c5d1d6ce514d89e3a8a2f6be069
+guid: 92dd53c9506f41649890cac48d9f402e
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,62 +8,62 @@ SketchUpImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Google Earth Snapshot
-    second: {fileID: 2100000, guid: 7dd130dae45c4cf4992450d3b2421503, type: 2}
+    second: {fileID: 2100000, guid: ef91da9baa0385141b44cb1f62c41d42, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: '[Color_000]'
-    second: {fileID: 2100000, guid: 49151043796560b48b973ed32a53130b, type: 2}
+    second: {fileID: 2100000, guid: 94842220bf13e7a4eaedb701469e82b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: '[Concrete_Form_4x8]1'
-    second: {fileID: 2100000, guid: 2a9b7f0c84d01f24882458c9ffba5939, type: 2}
+    second: {fileID: 2100000, guid: 54db0f7c00ec99d48a7e33e535ae0945, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _2
-    second: {fileID: 2100000, guid: 4104894b54d7aab4cbe564985da82c1d, type: 2}
+    second: {fileID: 2100000, guid: c10cb4fc49257324ab2c044aa3e8b482, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _5
-    second: {fileID: 2100000, guid: 5587ab3228b215746ba5cfd9b7fa95e2, type: 2}
+    second: {fileID: 2100000, guid: f3d8d7e32b31802499a7286f45dff964, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _6
-    second: {fileID: 2100000, guid: 23b2cda0befc3044e8ba0041066f84f6, type: 2}
+    second: {fileID: 2100000, guid: 4d5bedfdc0d3e474680d82ffe07a61b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
-    second: {fileID: 2100000, guid: 010a3ce7b064dbf4ca7a679dcc900f58, type: 2}
+    second: {fileID: 2100000, guid: 6d046ebb3d60be14e8e6579567cfed55, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Concrete_Form_4x8_tint0xE3E8E5FF
-    second: {fileID: 2800000, guid: 9647a15ae38cdd04ba4d8423c737b5a5, type: 3}
+    second: {fileID: 2800000, guid: a0e2f881ec9c6cb46864c0e832f1b0f4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Google Earth Snapshot
-    second: {fileID: 2800000, guid: 57cf5e334d82d2144a111dfe4317f02a, type: 3}
+    second: {fileID: 2800000, guid: 894a8749f773d834ab69a492bec2da6e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: "Tour Majunga fa\xE7ade north"
-    second: {fileID: 2800000, guid: 8460d9ca7245bcb47a14ea8be05814b9, type: 3}
+    second: {fileID: 2800000, guid: 57e7418ea5e264c468126ff4c6d9eb38, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: "Tour Majunga fa\xE7ade ouest et est_tint0x7F9CBFFF"
-    second: {fileID: 2800000, guid: 2df53200a2a65d74f97df6c1b49942ae, type: 3}
+    second: {fileID: 2800000, guid: 3c9a7395747097e4eb4931a4db169123, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: "Tour Majunga fa\xE7ade sud"
-    second: {fileID: 2800000, guid: 21ecf744494f7314991d860cb7b33c7f, type: 3}
+    second: {fileID: 2800000, guid: 6c37fb53f5ba79e4c90cd7118c713b7b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -108,7 +108,7 @@ SketchUpImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

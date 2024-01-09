@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4465ee54e8c17da4389674f9ad879042
+guid: a8041b2124767594996adc34e21282b2
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,47 +8,47 @@ SketchUpImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Google Earth Snapshot1
-    second: {fileID: 2100000, guid: 5f2461c9869295c40878c926e233b38c, type: 2}
+    second: {fileID: 2100000, guid: 19468674f864f054fb61292bc7117458, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _1
-    second: {fileID: 2100000, guid: bd5b8ea72eabbd747bb932d8b78dac48, type: 2}
+    second: {fileID: 2100000, guid: d8cddb43e3652e244baaa97da319abe2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _4
-    second: {fileID: 2100000, guid: b69f1dc0895afeb4594e0ea2b1080816, type: 2}
+    second: {fileID: 2100000, guid: de7ace8eb3c8ea94ea8b123cb726bdc0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _9
-    second: {fileID: 2100000, guid: 1511755bd63e65b42ab1ecee5e4dde32, type: 2}
+    second: {fileID: 2100000, guid: fae2e8ba00cf53b47be9d397c2d4652e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
-    second: {fileID: 2100000, guid: 018885299424f664d86c958f4b3614d1, type: 2}
+    second: {fileID: 2100000, guid: 4461d6d050dce8f4dae20379eb8908ef, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: GEI2B2
-    second: {fileID: 2800000, guid: b749b025d099a6941bf4c953b74bf63e, type: 3}
+    second: {fileID: 2800000, guid: 0f3b918dc1f3d884c86abcb70e4cc575, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cb31 2
-    second: {fileID: 2800000, guid: c1865cb189ddb0f408ba0361a50ea288, type: 3}
+    second: {fileID: 2800000, guid: c1bc763a03676d44fb4dab0a018d38c8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cb31 3
-    second: {fileID: 2800000, guid: 6cd9290a08e8e9848ae1f4ef96e597d1, type: 3}
+    second: {fileID: 2800000, guid: 0f26d7c850d8faa49a6789b45441623f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cb31 8
-    second: {fileID: 2800000, guid: 1ad78540c048e8747b457e336790476e, type: 3}
+    second: {fileID: 2800000, guid: f3b11a0505639c746b8b3419bb231f2b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -93,7 +93,7 @@ SketchUpImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

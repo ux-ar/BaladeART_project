@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9224ed1635f46d249a555e3caf877d7d
+guid: 7bcc96e1df47e1545a23b754b5a9bf86
 SketchUpImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,67 +8,67 @@ SketchUpImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CnitTop
-    second: {fileID: 2100000, guid: d780f32beac58194890c965872b3c5cc, type: 2}
+    second: {fileID: 2100000, guid: 27cd355a3088b964bb146afd1d974ffb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CnitTopC
-    second: {fileID: 2100000, guid: 74c88db9679fa12498bb85c98e192c8f, type: 2}
+    second: {fileID: 2100000, guid: 5e0b5dcf65437db4fb67bfcc1d00d4cb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Google Earth Snapshot1
-    second: {fileID: 2100000, guid: 5f4106a3b8215e941bd5aa2dd3c1e36f, type: 2}
+    second: {fileID: 2100000, guid: e053be76c1bbf464c822676f4870ef50, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _2
-    second: {fileID: 2100000, guid: b567e61cba60d9846a881e05817dbd9e, type: 2}
+    second: {fileID: 2100000, guid: 921a3b4aa5638f848a6511ad42b69434, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _4
-    second: {fileID: 2100000, guid: 8cbfda052e3d95748879ede108adce9d, type: 2}
+    second: {fileID: 2100000, guid: 81e39842d9af1694d974d3fea39d2755, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
-    second: {fileID: 2100000, guid: 17fb258eeb39e83429e6a6a81c4bc17f, type: 2}
+    second: {fileID: 2100000, guid: 82ae0ef5feaaaf6469ccd05a4fcbb4ca, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: cint 3
-    second: {fileID: 2100000, guid: 4120f0f7552e39246ad8e67a83bc3075, type: 2}
+    second: {fileID: 2100000, guid: 4bbb16cf8e606bd47865439eec18cc16, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CnitTop
-    second: {fileID: 2800000, guid: e740d0b3139c02c4cbcefab6dd9583bf, type: 3}
+    second: {fileID: 2800000, guid: db68d0d6e256bc541a7291996b29b173, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: CnitTopC
-    second: {fileID: 2800000, guid: e6e9e0b222d635f48bf6999966b41cd5, type: 3}
+    second: {fileID: 2800000, guid: 65cbe5377cbb3da47adfa0816905550a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: GEI8F
-    second: {fileID: 2800000, guid: d670bb2a85f46a84f891a2927d2e04d8, type: 3}
+    second: {fileID: 2800000, guid: 4320e07979ff9b74c80a7ee8deb339d8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cint 2
-    second: {fileID: 2800000, guid: 980679627f6ec1b49a9c80c30643d748, type: 3}
+    second: {fileID: 2800000, guid: 0f3570ee3db884348876fc51251ade54, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cint 3
-    second: {fileID: 2800000, guid: f9c8ee3f93cb62e408a20f29d04cab82, type: 3}
+    second: {fileID: 2800000, guid: d4e21342f46296f489dccdda475544f1, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: cint 5
-    second: {fileID: 2800000, guid: 7e6259219bb41104b805d88a12212f5b, type: 3}
+    second: {fileID: 2800000, guid: 719725722720612468b3669e5a6c0d72, type: 3}
   materials:
     materialImportMode: 2
     materialName: 2
@@ -113,7 +113,7 @@ SketchUpImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
