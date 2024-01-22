@@ -5,14 +5,17 @@ using UnityEngine.UI;
 //using UnityEngine.UIElements;
 using TMPro;
 
+
 public class Toggle_element : MonoBehaviour
 {
+    Variables variables = new Variables();
 
     //public Label full_distance;
     public TextMeshProUGUI full_distance;
     public int distance_value = 0;
     public void OnToggleMonuments(Toggle toggle_monuments)
     {
+
         Debug.Log("Monuments Toggle" + distance_value.ToString());
         if (toggle_monuments.isOn)
         {
@@ -33,7 +36,8 @@ public class Toggle_element : MonoBehaviour
         //var root = GetComponent<UIDocument>().rootVisualElement;
         //full_distance = root.Q<Label>("full_distance");
 
-        Debug.Log("START ");
+        Debug.Log("Variables : " + variables.full_time.ToString());
+
 
         distance_value = 50;
         full_distance.text = distance_value.ToString();
