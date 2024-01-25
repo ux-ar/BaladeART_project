@@ -337,28 +337,18 @@ MonoBehaviour:
   latitude: 0
   longitude: 0
   arObjectDataList:
-  - latitude: 48.89357
-    longitude: 2.2386577
-    arObjectPrefab: {fileID: 919132149155446097, guid: 7bcc96e1df47e1545a23b754b5a9bf86,
+  - latitude: 48.79117
+    longitude: 2.539547
+    arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
       type: 3}
-  - latitude: 48.89246
-    longitude: 2.237096
-    arObjectPrefab: {fileID: 919132149155446097, guid: f99e653ab54a7f04192c3c058652e1fe,
+    isInstantiated: 0
+  - latitude: 48.79103
+    longitude: 2.539491
+    arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
       type: 3}
-  - latitude: 48.89589
-    longitude: 2.2364857
-    arObjectPrefab: {fileID: 919132149155446097, guid: a8041b2124767594996adc34e21282b2,
-      type: 3}
-  - latitude: 48.79119
-    longitude: 2.539281
-    arObjectPrefab: {fileID: 919132149155446097, guid: b71c07c82f34af540b133f70bca358fb,
-      type: 3}
-  - latitude: 48.79115
-    longitude: 2.538981
-    arObjectPrefab: {fileID: 919132149155446097, guid: 92dd53c9506f41649890cac48d9f402e,
-      type: 3}
-  arObjectContainer: {fileID: 0}
-  displayDistance: 10
+    isInstantiated: 0
+  arObjectContainer: {fileID: 626376965}
+  displayDistance: 50
 --- !u!1 &332184930
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +412,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &626376963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626376965}
+  m_Layer: 0
+  m_Name: arObjectContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &626376965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626376963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -570,6 +591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125729852}
   - component: {fileID: 1125729851}
+  - component: {fileID: 1125729853}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -610,6 +632,21 @@ Transform:
   - {fileID: 138336794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125729853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125729850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlanePrefab: {fileID: 8346311276204083539, guid: 8546e49f67ef0cb43977c0bd7f21056b,
+    type: 3}
+  m_DetectionMode: -1
 --- !u!1 &1167446570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,3 +1047,4 @@ SceneRoots:
   - {fileID: 1167446573}
   - {fileID: 332184933}
   - {fileID: 1557566204}
+  - {fileID: 626376965}

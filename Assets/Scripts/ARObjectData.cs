@@ -9,4 +9,10 @@ public class ARObjectData
     public float latitude;
     public float longitude;
     public GameObject arObjectPrefab;
+    /*public bool isInstantiated;
+
+    public void Reset()
+    {
+        isInstantiated = false;
+    }*/
 }

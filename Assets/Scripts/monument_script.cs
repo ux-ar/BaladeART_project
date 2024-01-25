@@ -59,13 +59,9 @@ public class GPS : MonoBehaviour
 
     private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
     {
-        // Utiliser une méthode appropriée pour convertir les coordonnées géographiques en position dans Unity
-        // Cela dépendra de votre échelle et de la manière dont vous avez défini les positions géographiques par rapport à Unity.
-        // Vous pouvez utiliser des fonctions de projection cartographique ou d'autres méthodes en fonction de vos besoins.
-
-        // À titre d'exemple, une conversion simple en utilisant directement les latitudes et longitudes :
-        float latitudeScale = 11100; // 1 degré de latitude = environ 11.1 km
-        float longitudeScale = 11100; // À des fins de démonstration, on suppose une échelle constante pour la longitude
+        // Utiliser directement les latitudes et longitudes sans conversion en unités de distance
+        float latitudeScale = 1f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
+        float longitudeScale = 1f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
 
         float x = (targetLongitude - longitude) * longitudeScale;
         float z = (targetLatitude - latitude) * latitudeScale;
