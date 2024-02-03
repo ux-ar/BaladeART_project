@@ -337,16 +337,51 @@ MonoBehaviour:
   latitude: 0
   longitude: 0
   arObjectDataList:
-  - latitude: 48.79117
-    longitude: 2.539547
+  - id: 0
+    name: cube
+    latitude: 48.896347
+    longitude: 2.236253
     arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
       type: 3}
-    isInstantiated: 0
-  - latitude: 48.79103
-    longitude: 2.539491
-    arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
+    text: 
+    isMonument: 0
+    isOeuvre: 0
+  - id: 0
+    name: tourInitiale
+    latitude: 48.79102
+    longitude: 2.539772
+    arObjectPrefab: {fileID: 919132149155446097, guid: b71c07c82f34af540b133f70bca358fb,
       type: 3}
-    isInstantiated: 0
+    text: 
+    isMonument: 0
+    isOeuvre: 0
+  - id: 0
+    name: tourFirst
+    latitude: 48.79097
+    longitude: 2.540109
+    arObjectPrefab: {fileID: 919132149155446097, guid: a8041b2124767594996adc34e21282b2,
+      type: 3}
+    text: 
+    isMonument: 0
+    isOeuvre: 0
+  - id: 0
+    name: cnit
+    latitude: 48.790916
+    longitude: 2.540414
+    arObjectPrefab: {fileID: 919132149155446097, guid: 7bcc96e1df47e1545a23b754b5a9bf86,
+      type: 3}
+    text: 
+    isMonument: 0
+    isOeuvre: 0
+  - id: 0
+    name: arche
+    latitude: 48.790874
+    longitude: 2.540567
+    arObjectPrefab: {fileID: 919132149155446097, guid: f99e653ab54a7f04192c3c058652e1fe,
+      type: 3}
+    text: 
+    isMonument: 0
+    isOeuvre: 0
   arObjectContainer: {fileID: 626376965}
   displayDistance: 50
 --- !u!1 &332184930

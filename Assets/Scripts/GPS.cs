@@ -37,7 +37,7 @@ public class GPS : MonoBehaviour
 
     private bool IsTargetReached(float targetLatitude, float targetLongitude)
     {
-        float errorMargin = 0.0001f;
+        float errorMargin = 10f;
         return Mathf.Abs(latitude - targetLatitude) < errorMargin && Mathf.Abs(longitude - targetLongitude) < errorMargin;
     }
 
@@ -97,7 +97,6 @@ public class GPS : MonoBehaviour
             yield break;
         }
 
-        // Ne rien faire ici, la mise à jour se fera dans la boucle Update
         yield break;
     }
 }
