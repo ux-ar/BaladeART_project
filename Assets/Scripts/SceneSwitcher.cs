@@ -7,6 +7,8 @@ public class SceneSwitcher : MonoBehaviour
 {
     public GameObject gpsObject; // Référence à l'objet GPS
 
+    public GameObject canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +47,15 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void LoadCanvas(GameObject currentCanvas)
+    {
+        GameObject[] canvases = GameObject.FindGameObjectsWithTag("Canvas");
+        foreach (GameObject canvas in canvases)
+        {
+            canvas.SetActive(false);
+        }
+        currentCanvas.SetActive(true);
     }
 }
