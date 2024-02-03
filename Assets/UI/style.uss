@@ -15,7 +15,7 @@ Toggle .unity-toggle__checkmark {
     border-bottom-left-radius: 75px;
     -unity-background-image-tint-color: rgba(255, 255, 255, 0);
     background-color: rgb(189, 189, 255);
-}
+}   
 Toggle:checked .unity-toggle__checkmark {
     width: 60px;
     height: 60px;
