@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 73786507}
   - component: {fileID: 73786506}
   m_Layer: 5
-  m_Name: Button_start
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1731608384}
+      - m_Target: {fileID: 1425268583}
         m_TargetAssemblyTypeName: Toggle_element, Assembly-CSharp
         m_MethodName: OnToggleMonuments
         m_Mode: 2
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1731608384}
+      - m_Target: {fileID: 1425268583}
         m_TargetAssemblyTypeName: Toggle_element, Assembly-CSharp
         m_MethodName: OnToggleMonuments
         m_Mode: 2
@@ -2538,6 +2538,53 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1425268582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425268584}
+  - component: {fileID: 1425268583}
+  m_Layer: 0
+  m_Name: ToggleElementsScripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1425268583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425268582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2df1e9a7b0a52348a3358a05fcb2801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  full_distance: {fileID: 530526628}
+  distance_value: 0
+  fullData: 0000
+--- !u!4 &1425268584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425268582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3275867, y: -0.07949269, z: -2.0057902}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1488763681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,52 +2866,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1731608383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1731608385}
-  - component: {fileID: 1731608384}
-  m_Layer: 0
-  m_Name: UI_script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1731608384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731608383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2df1e9a7b0a52348a3358a05fcb2801, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  full_distance: {fileID: 530526628}
-  distance_value: 0
---- !u!4 &1731608385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1731608383}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 434.46808, y: 299.16278, z: -0.09719789}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1795303833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,6 +3524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43e69eadf6ef54ab17680165ee74e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gpsObject: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3533,4 +3536,4 @@ SceneRoots:
   - {fileID: 207224763}
   - {fileID: 2036518822}
   - {fileID: 947438831}
-  - {fileID: 1731608385}
+  - {fileID: 1425268584}
