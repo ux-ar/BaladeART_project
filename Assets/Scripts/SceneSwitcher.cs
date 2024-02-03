@@ -32,7 +32,6 @@ public class SceneSwitcher : MonoBehaviour
     {
 
     }
-
     public void Next()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -41,5 +40,10 @@ public class SceneSwitcher : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
