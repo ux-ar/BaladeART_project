@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43e69eadf6ef54ab17680165ee74e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gpsObject: {fileID: 0}
 --- !u!114 &608892280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,7 +2117,7 @@ GameObject:
   - component: {fileID: 1092852586}
   - component: {fileID: 1092852585}
   m_Layer: 0
-  m_Name: UI_script
+  m_Name: UiScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
