@@ -9,6 +9,8 @@ public class SceneSwitcher : MonoBehaviour
 
     public GameObject canvas;
 
+    //PlayerPrefs PlayerPrefs = new PlayerPrefs();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,8 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+
+        Debug.Log(PlayerPrefs.GetInt("Monuments"));
     }
 
     public void LoadCanvas(GameObject currentCanvas)

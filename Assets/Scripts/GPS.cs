@@ -6,25 +6,34 @@ public class GPS : MonoBehaviour
 {
     public static GPS Instance { get; private set; }
 
+    Init Init = new Init();
+
     public float latitude;
     public float longitude;
     public List<ARObjectData> arObjectDataList;
     public Transform arObjectContainer;
     public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
 
+
     private void Start()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
+
+        Debug.Log(Init.latitude);
+        Debug.Log(Init.arObjectDataList);
     }
 
     private void Update()
     {
-        // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
-        latitude = Input.location.lastData.latitude;
-        longitude = Input.location.lastData.longitude;
+        if (Input.location.status == LocationServiceStatus.Running)
 
+        {
+            // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
+            latitude = Input.location.lastData.latitude;
+            longitude = Input.location.lastData.longitude;
+        }
         // Vérifier pour chaque objet AR si la position est ok
         foreach (ARObjectData arObjectData in arObjectDataList)
         {
