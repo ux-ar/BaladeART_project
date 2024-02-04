@@ -10,7 +10,7 @@ public class GPS : MonoBehaviour
     public float longitude;
     public List<ARObjectData> arObjectDataList;
     public Transform arObjectContainer;
-    public float displayDistance = 10f; // Définir la distance à laquelle afficher le prefab
+    public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
 
     private void Start()
     {
@@ -37,7 +37,7 @@ public class GPS : MonoBehaviour
 
     private bool IsTargetReached(float targetLatitude, float targetLongitude)
     {
-        float errorMargin = 10f;
+        float errorMargin = 20f;
         return Mathf.Abs(latitude - targetLatitude) < errorMargin && Mathf.Abs(longitude - targetLongitude) < errorMargin;
     }
 
