@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
-public class runningData
+public class runningData : MonoBehaviour
 {
     public int index;
     public List<int> listIndex = new List<int>();
@@ -13,13 +13,13 @@ public class runningData
     {
         if (monument)
         {
-            if(oeuvre)
+            if (oeuvre)
             {
-                for(int i = 0; i< arObjectDataList.Count; i++)
+                for (int i = 0; i < arObjectDataList.Count; i++)
                 {
                     listIndex.Add(arObjectDataList[i].id);
                 }
-                
+
             }
             else
             {

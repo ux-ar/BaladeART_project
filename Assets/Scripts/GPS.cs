@@ -6,17 +6,23 @@ public class GPS : MonoBehaviour
 {
     public static GPS Instance { get; private set; }
 
+    Init Init = new Init();
+
     public float latitude;
     public float longitude;
     public List<ARObjectData> arObjectDataList;
     public Transform arObjectContainer;
     public float displayDistance = 10f; // Définir la distance à laquelle afficher le prefab
 
+
     private void Start()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
+
+        Debug.Log(Init.latitude);
+        Debug.Log(Init.arObjectDataList);
     }
 
     private void Update()
