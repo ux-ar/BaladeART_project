@@ -4,11 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
-public class runningData : MonoBehaviour
+public class RunningData : MonoBehaviour
 {
     public int index;
     public List<int> listIndex = new List<int>();
 
+    public int defineRunningIndex(List<ARObjectData> arObjectDataList)
+    {
+        return index;
+    }
     public void defineList(bool monument, bool oeuvre, List<ARObjectData> arObjectDataList)
     {
         if (monument)
@@ -44,8 +48,5 @@ public class runningData : MonoBehaviour
         }
     }
 
-    public int defineRunningIndex(List<ARObjectData> arObjectDataList)
-    {
-        return index;
-    }
+
 }

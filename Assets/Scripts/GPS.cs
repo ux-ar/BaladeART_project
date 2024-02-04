@@ -27,10 +27,13 @@ public class GPS : MonoBehaviour
 
     private void Update()
     {
-        // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
-        latitude = Input.location.lastData.latitude;
-        longitude = Input.location.lastData.longitude;
+        if (Input.location.status == LocationServiceStatus.Running)
 
+        {
+            // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
+            latitude = Input.location.lastData.latitude;
+            longitude = Input.location.lastData.longitude;
+        }
         // Vérifier pour chaque objet AR si la position est ok
         foreach (ARObjectData arObjectData in arObjectDataList)
         {
