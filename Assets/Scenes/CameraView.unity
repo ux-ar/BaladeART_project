@@ -238,8 +238,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66558630}
   serializedVersion: 2
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3275867, y: -0.07949269, z: -2.0057902}
+>>>>>>> parent of 79037d7 (pbm bug monument réglé)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -802,13 +807,13 @@ MonoBehaviour:
     name: cube
     latitude: 48.89635
     longitude: 2.236253
-    arObjectPrefab: {fileID: 919132149155446097, guid: a8041b2124767594996adc34e21282b2,
+    arObjectPrefab: {fileID: 8599920064324358783, guid: 1b26312bb79ad0b4f8428b828f3e444f,
       type: 3}
     text: 
     isMonument: 0
     isOeuvre: 0
   arObjectContainer: {fileID: 66558632}
-  displayDistance: 100
+  displayDistance: 10
 --- !u!114 &138336797
 MonoBehaviour:
   m_ObjectHideFlags: 0
