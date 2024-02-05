@@ -8,9 +8,9 @@ public class Init : MonoBehaviour
 
     public float latitude;
     public float longitude;
-    public List<ARObjectData> arObjectDataList;
+    public List<ARObjectData> dataList;
     public Transform arObjectContainer;
-    public float displayDistance = 10f; // Définir la distance à laquelle afficher le prefab
+    public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
 
     private void Start()
     {

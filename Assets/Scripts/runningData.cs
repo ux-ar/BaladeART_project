@@ -9,40 +9,40 @@ public class RunningData : MonoBehaviour
     public int index;
     public List<int> listIndex = new List<int>();
 
-    public int defineRunningIndex(List<ARObjectData> arObjectDataList)
+    public int defineRunningIndex(List<ARObjectData> dataList)
     {
         return index;
     }
-    public void defineList(bool monument, bool oeuvre, List<ARObjectData> arObjectDataList)
+    public void defineList(bool monument, bool oeuvre, List<ARObjectData> dataList)
     {
         if (monument)
         {
             if (oeuvre)
             {
-                for (int i = 0; i < arObjectDataList.Count; i++)
+                for (int i = 0; i < dataList.Count; i++)
                 {
-                    listIndex.Add(arObjectDataList[i].id);
+                    listIndex.Add(dataList[i].id);
                 }
 
             }
             else
             {
-                for (int i = 0; i < arObjectDataList.Count; i++)
+                for (int i = 0; i < dataList.Count; i++)
                 {
-                    if (arObjectDataList[i].isMonument)
+                    if (dataList[i].isMonument)
                     {
-                        listIndex.Add(arObjectDataList[i].id);
+                        listIndex.Add(dataList[i].id);
                     }
                 }
             }
         }
         else
         {
-            for (int i = 0; i < arObjectDataList.Count; i++)
+            for (int i = 0; i < dataList.Count; i++)
             {
-                if (arObjectDataList[i].isOeuvre)
+                if (dataList[i].isOeuvre)
                 {
-                    listIndex.Add(arObjectDataList[i].id);
+                    listIndex.Add(dataList[i].id);
                 }
             }
         }

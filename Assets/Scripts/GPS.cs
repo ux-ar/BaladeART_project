@@ -10,9 +10,9 @@ public class GPS : MonoBehaviour
 
     public float latitude;
     public float longitude;
-    public List<ARObjectData> arObjectDataList;
+    public List<ARObjectData> dataList;
     public Transform arObjectContainer;
-    public float displayDistance = 10f; // Définir la distance à laquelle afficher le prefab
+    public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
 
 
     private void Start()
@@ -22,7 +22,7 @@ public class GPS : MonoBehaviour
         StartCoroutine(StartLocationService());
 
         Debug.Log(Init.latitude);
-        Debug.Log(Init.arObjectDataList);
+        Debug.Log(Init.dataList);
     }
 
     private void Update()
@@ -35,7 +35,7 @@ public class GPS : MonoBehaviour
             longitude = Input.location.lastData.longitude;
         }
         // Vérifier pour chaque objet AR si la position est ok
-        foreach (ARObjectData arObjectData in arObjectDataList)
+        foreach (ARObjectData arObjectData in dataList)
         {
             if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
             {

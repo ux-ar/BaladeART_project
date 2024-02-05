@@ -22,7 +22,7 @@ public class updateGPScoord : MonoBehaviour
     {
         full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
         Debug.Log("AR: ");
-        Debug.Log(Init.Instance.arObjectDataList[0].text);
+        Debug.Log(Init.Instance.dataList[0].text);
     }
     private void Update()
     {
