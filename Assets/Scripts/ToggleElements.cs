@@ -99,7 +99,7 @@ public class Toggle_element : MonoBehaviour
     void Update()
     {
 
-        full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
+        full_distance.text = distance_value.ToString();
         full_time.text = time_value.ToString();
         full_elevation.text = elevation_value.ToString();
 

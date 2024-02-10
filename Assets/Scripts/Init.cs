@@ -22,9 +22,12 @@ public class Init : MonoBehaviour
     public TextMeshProUGUI popupTitle;
     public TextMeshProUGUI popupText;
 
+    public TextMeshProUGUI debugTextTmp;
+
     public float currentLatitude;
     public float currentLongitude;
 
+    string debugText = "";
 
     #endregion
     #region Init
@@ -53,11 +56,20 @@ public class Init : MonoBehaviour
     private void Update()
     {
 
+
         // debug1.text = "name";
         // Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
 
 
         debug2.text = PlayerPrefs.GetInt("Distance").ToString();
+        debugText += "Distance " + PlayerPrefs.GetInt("Distance").ToString();
+
+        debugText += "list count " + listIndex.Count.ToString();
+        debugText += "list index ";
+        for (int i = 0; i < listIndex.Count; i++)
+        {
+            debugText += listIndex[i].ToString() + ",";
+        }
 
         // Deisplay current location
         loc_text.text = "Latitude: " + currentLatitude.ToString() + " Longitude: " + currentLongitude.ToString();
@@ -78,6 +90,9 @@ public class Init : MonoBehaviour
 
         UpdateGps();
 
+
+        debugTextTmp.text = debugText;
+        debugText = "";
     }
 
     #endregion
@@ -156,7 +171,7 @@ public class Init : MonoBehaviour
 
     public void defineList()
     {
-
+        // check what is selected from the homepage
         bool monument = PlayerPrefs.GetInt("Monuments") == 1;
         bool oeuvre = PlayerPrefs.GetInt("Oeuvres") == 1;
 
