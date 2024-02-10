@@ -11,20 +11,35 @@ public class Toggle_element : MonoBehaviour
 
     //public Label full_distance;
     public TextMeshProUGUI full_distance;
-    public int distance_value = 0;
+    public TextMeshProUGUI full_time;
+    public TextMeshProUGUI full_elevation;
+    private int distance_value = 0;
+    private int time_value = 0;
+    private int elevation_value = 0;
+    public int distance_monuments = 25;
+    public int distance_oeuvres = 10;
+    public int time_monuments = 10;
+    public int time_oeuvres = 5;
+    public int elevation_monuments = 10;
+    public int elevation_oeuvres = 20;
+
 
     public void OnToggleMonuments(Toggle toggle_monuments)
     {
 
         if (toggle_monuments.isOn)
         {
-            distance_value += 25;
+            distance_value += distance_monuments;
+            time_value += time_monuments;
+            elevation_value += elevation_monuments;
             PlayerPrefs.SetInt("Monuments", 1);
 
         }
         else
         {
-            distance_value -= 25;
+            distance_value -= distance_monuments;
+            time_value -= time_monuments;
+            elevation_value -= elevation_monuments;
             PlayerPrefs.SetInt("Monuments", 0);
         }
         //full_distance.text = distance_value.ToString();
@@ -39,12 +54,16 @@ public class Toggle_element : MonoBehaviour
     {
         if (toggle_oeuvres.isOn)
         {
-            distance_value += 25;
+            distance_value += distance_oeuvres;
+            time_value += time_oeuvres;
+            elevation_value += elevation_oeuvres;
             PlayerPrefs.SetInt("Oeuvres", 1);
         }
         else
         {
-            distance_value -= 25;
+            distance_value -= distance_oeuvres;
+            time_value -= time_oeuvres;
+            elevation_value -= elevation_oeuvres;
             PlayerPrefs.SetInt("Oeuvres", 0);
         }
         //full_distance.text = distance_value.ToString();
@@ -60,8 +79,11 @@ public class Toggle_element : MonoBehaviour
         Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
         PlayerPrefs.SetInt("Monuments", 0);
         PlayerPrefs.SetInt("Oeuvres", 0);
-        PlayerPrefs.SetInt("Distance", 50);
+        PlayerPrefs.SetInt("Distance", 0);
 
+        distance_value = distance_monuments + distance_oeuvres;
+        time_value = time_monuments + time_oeuvres;
+        elevation_value = elevation_monuments + elevation_oeuvres;
 
 
         // DontDestroyOnLoad(this.fullData);
@@ -69,7 +91,6 @@ public class Toggle_element : MonoBehaviour
         //var root = GetComponent<UIDocument>().rootVisualElement;
         //full_distance = root.Q<Label>("full_distance");
 
-        full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
     }
 
 
@@ -77,6 +98,10 @@ public class Toggle_element : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
+        full_time.text = time_value.ToString();
+        full_elevation.text = elevation_value.ToString();
 
 
     }

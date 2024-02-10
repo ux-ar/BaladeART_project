@@ -5,12 +5,12 @@ using TMPro;
 
 public class Init : MonoBehaviour
 {
+    #region Variables
+
     public static Init Instance { get; private set; }
 
     public int id = 1;
     public List<int> listIndex = new List<int>();
-    public float latitude;
-    public float longitude;
     public List<ARObjectData> dataList;
     public Transform arObjectContainer;
     public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
@@ -19,13 +19,31 @@ public class Init : MonoBehaviour
     public TextMeshProUGUI debug1;
     public TextMeshProUGUI debug2;
 
+    public TextMeshProUGUI popupTitle;
+    public TextMeshProUGUI popupText;
+
+    public float currentLatitude;
+    public float currentLongitude;
+
+
+    #endregion
+    #region Init
+
     private void Start()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        StartCoroutine(StartLocationService());
+
+
+        // to remove and use with toggleElements
         PlayerPrefs.SetInt("Monuments", 1);
         PlayerPrefs.SetInt("Oeuvres", 1);
+
+        // Location for map 
+        PlayerPrefs.SetFloat("Latitude", currentLatitude);
+        PlayerPrefs.SetFloat("Longitude", currentLongitude);
 
         defineList();
 
@@ -36,19 +54,103 @@ public class Init : MonoBehaviour
     {
 
         // debug1.text = "name";
-        Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
+        // Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
+
 
         debug2.text = PlayerPrefs.GetInt("Distance").ToString();
-        loc_text.text = "Latitude: " + latitude.ToString() + " Longitude: " + longitude.ToString();
 
+        // Deisplay current location
+        loc_text.text = "Latitude: " + currentLatitude.ToString() + " Longitude: " + currentLongitude.ToString();
+
+
+        // Debug ar object
         for (int i = 0; i < dataList.Count; i++)
         {
             if (id == dataList[i].id)
             {
-                Debug.Log(dataList[i].arObjectPrefab.name);
+                // Debug.Log(dataList[i].arObjectPrefab.name);
                 debug1.text = dataList[i].name;
             }
         }
+
+
+        UpdatePopup();
+
+        UpdateGps();
+
+    }
+
+    #endregion
+    #region Methods
+
+    public void UpdatePopup()
+    {
+        for (int i = 0; i < dataList.Count; i++)
+        {
+            if (id == dataList[i].id)
+            {
+                popupTitle.text = dataList[i].name;
+                popupText.text = dataList[i].text;
+            }
+        }
+    }
+
+    public void UpdateGps()
+    {
+        if (Input.location.status == LocationServiceStatus.Running)
+        {
+            // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
+            currentLatitude = Input.location.lastData.latitude;
+            currentLongitude = Input.location.lastData.longitude;
+
+
+            // Location for map 
+            PlayerPrefs.SetFloat("Latitude", currentLatitude);
+            PlayerPrefs.SetFloat("Longitude", currentLongitude);
+        }
+
+        // Vérifier pour chaque objet AR si la position est ok
+        foreach (ARObjectData arObjectData in dataList)
+        {
+            if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
+            {
+                InstantiateARObject(arObjectData); // Instancier l'objet AR
+            }
+        }
+    }
+
+    private bool IsTargetReached(float targetLatitude, float targetLongitude)
+    {
+        float errorMargin = 10f;
+        return Mathf.Abs(currentLatitude - targetLatitude) < errorMargin && Mathf.Abs(currentLongitude - targetLongitude) < errorMargin;
+    }
+
+    private void InstantiateARObject(ARObjectData arObjectData)
+    {
+        // Utiliser les coordonnées géographiques pour déterminer la position
+        Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
+
+        // Vérifier la distance entre la position actuelle et la position cible
+        float distance = Vector3.Distance(transform.position, position);
+
+        // Si la distance est inférieure ou égale à la distance de visualisation spécifiée, alors instancier l'objet AR
+        if (distance <= displayDistance)
+        {
+            // Instancier l'objet AR à la position calculée
+            Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
+        }
+    }
+
+    private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
+    {
+        // Utiliser directement les latitudes et longitudes sans conversion en unités de distance
+        float latitudeScale = 1f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
+        float longitudeScale = 1f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
+
+        float x = (targetLongitude - currentLongitude) * longitudeScale;
+        float z = (targetLatitude - currentLatitude) * latitudeScale;
+
+        return new Vector3(x, 0, z);
     }
 
 
@@ -94,5 +196,42 @@ public class Init : MonoBehaviour
             }
         }
     }
+
+    #endregion
+    #region Gps
+
+    public IEnumerator StartLocationService()
+    {
+        if (!Input.location.isEnabledByUser)
+        {
+            Debug.Log("User has not enabled GPS");
+            yield break;
+        }
+
+        Input.location.Start();
+        int maxWait = 20;
+        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
+        {
+            yield return new WaitForSeconds(1);
+            maxWait--;
+        }
+
+        if (maxWait <= 0)
+        {
+            Debug.Log("Timed out");
+            yield break;
+        }
+
+        if (Input.location.status == LocationServiceStatus.Failed)
+        {
+            Debug.Log("Unable to determine device location");
+            yield break;
+        }
+
+        yield break;
+    }
+
+
+    #endregion
 
 }

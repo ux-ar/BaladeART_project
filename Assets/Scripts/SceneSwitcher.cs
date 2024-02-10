@@ -18,12 +18,12 @@ public class SceneSwitcher : MonoBehaviour
         if (gpsObject != null)
         {
             // Obtenez ou ajoutez le composant GPS à l'objet GPS
-            GPS gps = gpsObject.GetComponent<GPS>();
+            Init gps = gpsObject.GetComponent<Init>();
 
             // Si le composant GPS n'existe pas, ajoutez-le
             if (gps == null)
             {
-                gps = gpsObject.AddComponent<GPS>();
+                gps = gpsObject.AddComponent<Init>();
             }
 
             // Démarrez le service de localisation
