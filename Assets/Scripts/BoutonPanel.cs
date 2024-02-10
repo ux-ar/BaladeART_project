@@ -10,7 +10,7 @@ public class BoutonPanel : MonoBehaviour
     private void Start()
     {
         myButton.SetActive(false);
-        Debug.Log(myMessage);
+        //Debug.Log(myMessage);
         Show(myMessage);
     }
 
@@ -18,8 +18,8 @@ public class BoutonPanel : MonoBehaviour
     {
         if (num == 1) { myButton.SetActive(true); }
 
-       
+
     }
 
-    
+
 }

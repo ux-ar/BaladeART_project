@@ -8,76 +8,70 @@ public class GPS : MonoBehaviour
 
     Init Init = new Init();
 
-    public float latitude;
-    public float longitude;
-    public List<ARObjectData> dataList;
-    public Transform arObjectContainer;
-    public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
-
-
     private void Start()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         StartCoroutine(StartLocationService());
 
-        Debug.Log(Init.latitude);
-        Debug.Log(Init.dataList);
+        Debug.Log("Init instance");
+        Debug.Log(Init.Instance.latitude);
+        Debug.Log(Init.Instance.dataList[0]);
     }
-
-    private void Update()
-    {
-        if (Input.location.status == LocationServiceStatus.Running)
-
+    /*
+        private void Update()
         {
-            // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
-            latitude = Input.location.lastData.latitude;
-            longitude = Input.location.lastData.longitude;
-        }
-        // Vérifier pour chaque objet AR si la position est ok
-        foreach (ARObjectData arObjectData in dataList)
-        {
-            if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
+            if (Input.location.status == LocationServiceStatus.Running)
+
             {
-                InstantiateARObject(arObjectData); // Instancier l'objet AR
+                // Mettre à jour les coordonnées GPS à chaque itération de la boucle de mise à jour du jeu
+                latitude = Input.location.lastData.latitude;
+                longitude = Input.location.lastData.longitude;
+            }
+            // Vérifier pour chaque objet AR si la position est ok
+            foreach (ARObjectData arObjectData in dataList)
+            {
+                if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
+                {
+                    InstantiateARObject(arObjectData); // Instancier l'objet AR
+                }
             }
         }
-    }
 
-    private bool IsTargetReached(float targetLatitude, float targetLongitude)
-    {
-        float errorMargin = 10f;
-        return Mathf.Abs(latitude - targetLatitude) < errorMargin && Mathf.Abs(longitude - targetLongitude) < errorMargin;
-    }
-
-    private void InstantiateARObject(ARObjectData arObjectData)
-    {
-        // Utiliser les coordonnées géographiques pour déterminer la position
-        Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
-
-        // Vérifier la distance entre la position actuelle et la position cible
-        float distance = Vector3.Distance(transform.position, position);
-
-        // Si la distance est inférieure ou égale à la distance de visualisation spécifiée, alors instancier l'objet AR
-        if (distance <= displayDistance)
+        private bool IsTargetReached(float targetLatitude, float targetLongitude)
         {
-            // Instancier l'objet AR à la position calculée
-            Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
+            float errorMargin = 10f;
+            return Mathf.Abs(latitude - targetLatitude) < errorMargin && Mathf.Abs(longitude - targetLongitude) < errorMargin;
         }
-    }
 
-    private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
-    {
-        // Utiliser directement les latitudes et longitudes sans conversion en unités de distance
-        float latitudeScale = 1f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
-        float longitudeScale = 1f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
+        private void InstantiateARObject(ARObjectData arObjectData)
+        {
+            // Utiliser les coordonnées géographiques pour déterminer la position
+            Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
 
-        float x = (targetLongitude - longitude) * longitudeScale;
-        float z = (targetLatitude - latitude) * latitudeScale;
+            // Vérifier la distance entre la position actuelle et la position cible
+            float distance = Vector3.Distance(transform.position, position);
 
-        return new Vector3(x, 0, z);
-    }
+            // Si la distance est inférieure ou égale à la distance de visualisation spécifiée, alors instancier l'objet AR
+            if (distance <= displayDistance)
+            {
+                // Instancier l'objet AR à la position calculée
+                Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
+            }
+        }
 
+        private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
+        {
+            // Utiliser directement les latitudes et longitudes sans conversion en unités de distance
+            float latitudeScale = 1f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
+            float longitudeScale = 1f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
+
+            float x = (targetLongitude - longitude) * longitudeScale;
+            float z = (targetLatitude - latitude) * latitudeScale;
+
+            return new Vector3(x, 0, z);
+        }
+*/
     public IEnumerator StartLocationService()
     {
         if (!Input.location.isEnabledByUser)
@@ -108,4 +102,5 @@ public class GPS : MonoBehaviour
 
         yield break;
     }
+
 }
