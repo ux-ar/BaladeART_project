@@ -9,8 +9,8 @@ public class Init : MonoBehaviour
 
     public static Init Instance { get; private set; }
 
-    public int id = 1;
-    public List<int> listIndex = new List<int>();
+    public int runningId = 1;
+    public List<int> runningList = new List<int>();
     public List<ARObjectData> dataList;
     public Transform arObjectContainer;
     public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
@@ -41,8 +41,8 @@ public class Init : MonoBehaviour
 
 
         // to remove and use with toggleElements
-        PlayerPrefs.SetInt("Monuments", 1);
-        PlayerPrefs.SetInt("Oeuvres", 1);
+        //PlayerPrefs.SetInt("Monuments", 1);
+        //PlayerPrefs.SetInt("Oeuvres", 1);
 
         // Location for map 
         PlayerPrefs.SetFloat("Latitude", currentLatitude);
@@ -62,14 +62,6 @@ public class Init : MonoBehaviour
 
 
         debug2.text = PlayerPrefs.GetInt("Distance").ToString();
-        debugText += "Distance " + PlayerPrefs.GetInt("Distance").ToString();
-
-        debugText += "list count " + listIndex.Count.ToString();
-        debugText += "list index ";
-        for (int i = 0; i < listIndex.Count; i++)
-        {
-            debugText += listIndex[i].ToString() + ",";
-        }
 
         // Deisplay current location
         loc_text.text = "Latitude: " + currentLatitude.ToString() + " Longitude: " + currentLongitude.ToString();
@@ -78,7 +70,7 @@ public class Init : MonoBehaviour
         // Debug ar object
         for (int i = 0; i < dataList.Count; i++)
         {
-            if (id == dataList[i].id)
+            if (runningId == dataList[i].id)
             {
                 // Debug.Log(dataList[i].arObjectPrefab.name);
                 debug1.text = dataList[i].name;
@@ -91,8 +83,36 @@ public class Init : MonoBehaviour
         UpdateGps();
 
 
+        DebugLog();
+
+    }
+    public void DebugLog()
+    {
+        debugText += "Latitude " + currentLatitude.ToString() + "\n";
+        debugText += "Longitude " + currentLongitude.ToString() + "\n";
+
+        debugText += "Distance Pref" + PlayerPrefs.GetInt("Distance").ToString() + "\n";
+        debugText += "Monuments Pref" + PlayerPrefs.GetInt("Monuments").ToString() + "\n";
+        debugText += "Oeuvres Pref" + PlayerPrefs.GetInt("Oeuvres").ToString() + "\n";
+        debugText += "running id " + runningId.ToString() + "\n";
+        for (int i = 0; i < dataList.Count; i++)
+        {
+            if (runningId == dataList[i].id)
+            {
+                debugText += "running name " + dataList[i].name + "\n";
+            }
+        }
+        debugText += "list count " + runningList.Count.ToString() + "\n";
+        debugText += "list index ";
+        for (int i = 0; i < runningList.Count; i++)
+        {
+            debugText += runningList[i].ToString() + ",";
+        }
+        debugText += "\n";
+
         debugTextTmp.text = debugText;
         debugText = "";
+
     }
 
     #endregion
@@ -102,7 +122,7 @@ public class Init : MonoBehaviour
     {
         for (int i = 0; i < dataList.Count; i++)
         {
-            if (id == dataList[i].id)
+            if (runningId == dataList[i].id)
             {
                 popupTitle.text = dataList[i].name;
                 popupText.text = dataList[i].text;
@@ -124,14 +144,35 @@ public class Init : MonoBehaviour
             PlayerPrefs.SetFloat("Longitude", currentLongitude);
         }
 
-        // Vérifier pour chaque objet AR si la position est ok
-        foreach (ARObjectData arObjectData in dataList)
+        // from the currentId list 
+        if (runningList.Count > 0)
         {
-            if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
+            for (int i = 0; i < runningList.Count; i++)
             {
-                InstantiateARObject(arObjectData); // Instancier l'objet AR
+                // Vérifier pour chaque objet AR si la position est ok
+                for (int j = 0; j < dataList.Count; j++)
+                {
+                    if (runningList[i] == dataList[j].id)
+                    {
+                        if (IsTargetReached(dataList[j].latitude, dataList[j].longitude))
+                        {
+                            runningId = dataList[j].id;
+                            // runningList.RemoveAt(j);
+                            InstantiateARObject(dataList[j]); // Instancier l'objet AR
+                        }
+                    }
+                }
             }
         }
+
+        // Vérifier pour chaque objet AR si la position est ok
+        // foreach (ARObjectData arObjectData in dataList)
+        // {
+        //     if (IsTargetReached(arObjectData.latitude, arObjectData.longitude))
+        //     {
+        //         InstantiateARObject(arObjectData); // Instancier l'objet AR
+        //     }
+        // }
     }
 
     private bool IsTargetReached(float targetLatitude, float targetLongitude)
@@ -175,7 +216,7 @@ public class Init : MonoBehaviour
         bool monument = PlayerPrefs.GetInt("Monuments") == 1;
         bool oeuvre = PlayerPrefs.GetInt("Oeuvres") == 1;
 
-        listIndex.Clear();
+        runningList.Clear();
 
 
         Debug.Log("oeuvre" + oeuvre.ToString());
@@ -183,31 +224,42 @@ public class Init : MonoBehaviour
         {
             if (oeuvre)
             {
+                // monuments and oeuvres
                 for (int i = 0; i < dataList.Count; i++)
                 {
-                    listIndex.Add(dataList[i].id);
+                    runningList.Add(dataList[i].id);
                 }
 
             }
             else
             {
+                // monuments only
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     if (dataList[i].isMonument)
                     {
-                        listIndex.Add(dataList[i].id);
+                        runningList.Add(dataList[i].id);
                     }
                 }
             }
         }
         else
         {
-            for (int i = 0; i < dataList.Count; i++)
+            if (oeuvre)
             {
-                if (dataList[i].isOeuvre)
+                // oeuvres only
+                for (int i = 0; i < dataList.Count; i++)
                 {
-                    listIndex.Add(dataList[i].id);
+                    if (dataList[i].isOeuvre)
+                    {
+                        runningList.Add(dataList[i].id);
+                    }
                 }
+            }
+            else
+            {
+                // nothing selected
+                runningList.Clear();
             }
         }
     }

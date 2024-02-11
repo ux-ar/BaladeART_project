@@ -9,7 +9,9 @@ using TMPro;
 public class Toggle_element : MonoBehaviour
 {
 
-    //public Label full_distance;
+
+    public Toggle toggle_monuments;
+    public Toggle toggle_oeuvres;
     public TextMeshProUGUI full_distance;
     public TextMeshProUGUI full_time;
     public TextMeshProUGUI full_elevation;
@@ -24,7 +26,7 @@ public class Toggle_element : MonoBehaviour
     public int elevation_oeuvres = 20;
 
 
-    public void OnToggleMonuments(Toggle toggle_monuments)
+    public void OnToggleMonuments()
     {
 
         if (toggle_monuments.isOn)
@@ -50,7 +52,7 @@ public class Toggle_element : MonoBehaviour
 
     }
 
-    public void OnToggleOeuvres(Toggle toggle_oeuvres)
+    public void OnToggleOeuvres()
     {
         if (toggle_oeuvres.isOn)
         {
@@ -76,10 +78,10 @@ public class Toggle_element : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
-        PlayerPrefs.SetInt("Monuments", 0);
-        PlayerPrefs.SetInt("Oeuvres", 0);
-        PlayerPrefs.SetInt("Distance", 0);
+        //Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
+        PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+        PlayerPrefs.SetInt("Oeuvres", toggle_oeuvres.isOn == true ? 1 : 0);
+        PlayerPrefs.SetInt("Distance", distance_value);
 
         distance_value = distance_monuments + distance_oeuvres;
         time_value = time_monuments + time_oeuvres;
