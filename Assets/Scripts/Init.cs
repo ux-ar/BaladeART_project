@@ -27,6 +27,10 @@ public class Init : MonoBehaviour
     public float currentLatitude;
     public float currentLongitude;
 
+    public TextMeshProUGUI full_distance;
+    public TextMeshProUGUI full_time;
+    public TextMeshProUGUI full_elevation;
+
     string debugText = "";
 
     #endregion
@@ -78,6 +82,7 @@ public class Init : MonoBehaviour
         }
 
 
+        UpdateWalk();
         UpdatePopup();
 
         UpdateGps();
@@ -118,6 +123,14 @@ public class Init : MonoBehaviour
     #endregion
     #region Methods
 
+    public void UpdateWalk()
+    {
+        full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
+        full_time.text = PlayerPrefs.GetInt("Time").ToString();
+        full_elevation.text = PlayerPrefs.GetInt("Elevation").ToString();
+
+
+    }
     public void UpdatePopup()
     {
         for (int i = 0; i < dataList.Count; i++)

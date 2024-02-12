@@ -8,9 +8,10 @@ using System;
 public class Map : MonoBehaviour
 {
     public string apiKey;
+    public string FakeApiKey;
     public float lat = 48.892085864409815f;
     public float lon = 2.235504196336084f;
-    public int zoom = 14;
+    public int zoom = 24;
     public enum resolution { low = 1, high = 2 };
     public resolution mapResolution = resolution.low;
     public enum type { roadmap, satellite, gybrid, terrain };

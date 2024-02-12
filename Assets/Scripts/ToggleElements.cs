@@ -79,13 +79,44 @@ public class Toggle_element : MonoBehaviour
     void Start()
     {
         //Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
-        PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
-        PlayerPrefs.SetInt("Oeuvres", toggle_oeuvres.isOn == true ? 1 : 0);
-        PlayerPrefs.SetInt("Distance", distance_value);
+        // PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+        // PlayerPrefs.SetInt("Oeuvres", toggle_oeuvres.isOn == true ? 1 : 0);
+
 
         distance_value = distance_monuments + distance_oeuvres;
         time_value = time_monuments + time_oeuvres;
         elevation_value = elevation_monuments + elevation_oeuvres;
+
+        if (PlayerPrefs.GetInt("Distance") != null)
+        {
+            distance_value = PlayerPrefs.GetInt("Distance");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Distance", distance_value);
+        }
+
+
+
+        if (PlayerPrefs.GetInt("Monuments") != null)
+        {
+            toggle_monuments.isOn = PlayerPrefs.GetInt("Monuments") == 1 ? true : false;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+        }
+
+        if (PlayerPrefs.GetInt("Oeuvres") != null)
+        {
+            toggle_oeuvres.isOn = PlayerPrefs.GetInt("Oeuvres") == 1 ? true : false;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Ouvres", toggle_oeuvres.isOn == true ? 1 : 0);
+        }
+
+
 
 
         // DontDestroyOnLoad(this.fullData);
@@ -105,6 +136,9 @@ public class Toggle_element : MonoBehaviour
         full_time.text = time_value.ToString();
         full_elevation.text = elevation_value.ToString();
 
+        PlayerPrefs.SetInt("Distance", distance_value);
+        PlayerPrefs.SetInt("Time", time_value);
+        PlayerPrefs.SetInt("Elevation", elevation_value);
 
     }
 
