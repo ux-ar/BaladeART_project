@@ -9,7 +9,8 @@ public class Init : MonoBehaviour
 
     public static Init Instance { get; private set; }
 
-    public int runningId = 1;
+    public int runningId = 2;
+    public TextMeshProUGUI runningText;
     public List<int> runningList = new List<int>();
     public List<ARObjectData> dataList;
     public Transform arObjectContainer;
@@ -52,6 +53,8 @@ public class Init : MonoBehaviour
         PlayerPrefs.SetFloat("Latitude", currentLatitude);
         PlayerPrefs.SetFloat("Longitude", currentLongitude);
 
+        PlayerPrefs.SetInt("RunningId", runningId);
+
         defineList();
 
         //Debug.Log(dataList[0].name);
@@ -60,6 +63,7 @@ public class Init : MonoBehaviour
     private void Update()
     {
 
+        runningId = PlayerPrefs.GetInt("RunningId");
 
         // debug1.text = "name";
         // Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
@@ -81,14 +85,13 @@ public class Init : MonoBehaviour
             }
         }
 
+        runningText.text = runningId.ToString();
 
         UpdateWalk();
         UpdatePopup();
-
         UpdateGps();
-
-
         DebugLog();
+        UpdateList();
 
     }
     public void DebugLog()
@@ -128,8 +131,84 @@ public class Init : MonoBehaviour
         full_distance.text = PlayerPrefs.GetInt("Distance").ToString();
         full_time.text = PlayerPrefs.GetInt("Time").ToString();
         full_elevation.text = PlayerPrefs.GetInt("Elevation").ToString();
+    }
+    public void UpdateList()
+    {
+
+        string runningListTmp = "";
+        for (int i = 0; i < runningList.Count; i++)
+        {
+            runningListTmp += runningList[i].ToString() + ",";
+        }
+        PlayerPrefs.SetString("RunningList", runningListTmp);
+        Debug.Log("running list " + PlayerPrefs.GetString("RunningList"));
+    }
+    public void RunningId(int id)
+    {
+        PlayerPrefs.SetInt("RunningId", id);
+    }
+    public bool CheckRunningId(int runningId, bool isNext)
+    {
+        //List<string> listString = new List<string>(PlayerPrefs.GetString("RunningList").Split(','));
+        //List<int> runningListCheck = listString.Select(int.Parse).ToList();
+        //List<int> listTemp = new List<int>(PlayerPrefs.GetString("RunningList").Split(',').Select(int.Parse));
+
+        List<int> runningListCheck = new List<int>();
+        List<string> listString = new List<string>(PlayerPrefs.GetString("RunningList").Split(','));
+        foreach (string str in listString)
+        {
+            if (int.TryParse(str, out int result))
+            {
+                runningListCheck.Add(result);
+            }
+        }
+        // check if the running id is in the list
+        bool isRunningId = false;
 
 
+        // for (int i = 0; i < runningListCheck.Count; i++)
+        // {
+        //     Debug.Log("id test " + runningListCheck[i].ToString());
+        //     if (runningList.Contains(runningListCheck[i]))
+        //     {
+        //         isRunningId = true;
+        //         break;
+        //     }
+        // }
+        Debug.Log("running id " + runningId.ToString() + " list " + runningListCheck.Contains(runningId).ToString());
+        isRunningId = runningListCheck.Contains(runningId);
+        return isRunningId;
+
+    }
+    public void NextRunningId()
+    {
+        int tempId = PlayerPrefs.GetInt("RunningId");
+        tempId++;
+        if (CheckRunningId(tempId, true))
+        {
+            PlayerPrefs.SetInt("RunningId", tempId);
+            Debug.Log("running id next " + PlayerPrefs.GetInt("RunningId").ToString());
+        }
+        else
+        {
+            Debug.Log("running id next " + "not in the list");
+
+        }
+    }
+    public void PreviousRunningId()
+    {
+        int tempId = PlayerPrefs.GetInt("RunningId");
+        tempId--;
+        if (CheckRunningId(tempId, true))
+        {
+            PlayerPrefs.SetInt("RunningId", tempId);
+            Debug.Log("running id next " + PlayerPrefs.GetInt("RunningId").ToString());
+        }
+        else
+        {
+            Debug.Log("running id next " + "not in the list");
+
+        }
     }
     public void UpdatePopup()
     {
