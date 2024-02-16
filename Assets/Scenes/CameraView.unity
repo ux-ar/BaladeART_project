@@ -809,12 +809,283 @@ MonoBehaviour:
     isMonument: 1
     isOeuvre: 0
   - id: 2
-    name: Sara
-    latitude: 48.84
-    longitude: 2.285
-    arObjectPrefab: {fileID: 919132149155446097, guid: a8041b2124767594996adc34e21282b2,
+    name: "Arche de la D\xE9fense"
+    latitude: 48.892258
+    longitude: 2.236827
+    arObjectPrefab: {fileID: 919132149155446097, guid: f99e653ab54a7f04192c3c058652e1fe,
       type: 3}
-    text: 
+    text: "L\u2019Arche de la D\xE9fense vient d\u2019une id\xE9e de Georges Pompidou,
+      qui voulait cr\xE9er une \u0153uvre sur le grand axe parisien reliant l\u2019arc
+      de triomphe, l\u2019ob\xE9lisque, les Tuileries et le Louvre. Ensuite, le pr\xE9sident
+      Val\xE9ry Giscard d\u2019Estaing revient sur cette id\xE9e et d\xE9cide d\u2019organiser
+      un concours pour cr\xE9er l\u2019\u0153uvre. Mais c'est lorsque Fran\xE7ois
+      Mitterrand devient pr\xE9sident que le concours avec pour nom 'T\xEAte D\xE9fense'
+      est lanc\xE9. C\u2019est l\u2019architecte danois Johan Otto von Spreckelsen
+      accompagn\xE9 de l\u2019ing\xE9nieur fran\xE7ais Erik Reitzel qui gagnent ce
+      concours en 1985 en proposant la grande arche.  Son inauguration a eu lieu
+      en juillet 1989, pour f\xEAter les 100 ans de la tour Eiffel et 200 ans de
+      la r\xE9volution fran\xE7aise. Aujourd\u2019hui, la grande Arche abrite des
+      locaux de grandes entreprises et il n\u2019est malheureusement plus possible
+      de la visiter.  Sur le plan architectural, cette \u0153uvre du 20e si\xE8cle,
+      \xE9voquant l'Arc de Triomphe, mesure 112 m\xE8tres de long, 106.9 m\xE8tres
+      de large et atteint une hauteur imposante de 110.9 m\xE8tres. Une anecdote
+      fascinante souligne que le vide \xE0 l'int\xE9rieur pourrait accueillir la
+      cath\xE9drale Notre-Dame de Paris."
+    isMonument: 1
+    isOeuvre: 0
+  - id: 3
+    name: CNIT
+    latitude: 48.89204
+    longitude: 2.238598
+    arObjectPrefab: {fileID: 919132149155446097, guid: 7bcc96e1df47e1545a23b754b5a9bf86,
+      type: 3}
+    text: "Le CNIT, initialement nomm\xE9 Centre National des Industries et Techniques,
+      voit le jour en 1958 \xE0 La D\xE9fense. Sa cr\xE9ation d\xE9coule de l'insatisfaction
+      suscit\xE9e par le salon des constructeurs de machines-outils organis\xE9 en
+      1951 \xE0 Porte de Versailles. Cette derni\xE8re incita le pr\xE9sident du
+      syndicat des constructeurs, Prouteau, \xE0 concevoir un vaste centre d'expositions
+      industrielles. Choisi pour son emplacement id\xE9al \xE0 Courbevoie, le CNIT
+      n\xE9cessite l'achat de terrains aupr\xE8s de 40 propri\xE9taires distincts. 
+      Con\xE7u par les architectes Robert Camelot, Jean de Mailly, et Bernard Zehrfuss,
+      le b\xE2timent est inaugur\xE9 en 1958 par le g\xE9n\xE9ral de Gaulle. Pendant
+      plus de deux d\xE9cennies, le CNIT accueille d'importantes expositions avant
+      que la construction de la dalle pi\xE9tonni\xE8re du parvis de la D\xE9fense
+      en 1978 ne r\xE9duise sa hauteur et modifie sa structure. Face \xE0 des contraintes
+      d'espace et d'obsolescence, les grandes expositions se d\xE9placent au Parc
+      des Expositions \xE0 Porte de Versailles.   En 1988, une restructuration double
+      l'espace int\xE9rieur \xE0 200 000m\xB2, marquant le changement de nom pour
+      Centre des Nouvelles Industries et Technologies (CNIT). En 2009, une nouvelle
+      restructuration inclut l'exploitation du niveau inf\xE9rieur, une liaison avec
+      la gare, et l'int\xE9gration de bureaux et h\xF4tels.  Le b\xE2timent se caract\xE9rise
+      par une vo\xFBte autoportante en b\xE9ton arm\xE9 de 22 500m\xB2, remarquable
+      par son \xE9paisseur de seulement 6 cm et une port\xE9e de 218 m\xE8tres, \xE9tablissant
+      ainsi un record mondial."
+    isMonument: 1
+    isOeuvre: 0
+  - id: 4
+    name: Tour Initiale
+    latitude: 48.887226
+    longitude: 2.250642
+    arObjectPrefab: {fileID: 0}
+    text: "La Tour Initiale, initialement d\xE9sign\xE9e PB 31 (Puteaux/Bureaux,
+      31 niveaux), constitue l'une des deux premi\xE8res v\xE9ritables tours de bureaux
+      \xE9rig\xE9es dans le quartier d'affaires de La D\xE9fense. Con\xE7ue par les
+      architectes Jean de Mailly et Jacques Depuss\xE9, accompagn\xE9s de l'ing\xE9nieur
+      Jean Prouv\xE9 et de l'architecte Robert Giudici, la tour est dot\xE9e d'une
+      fa\xE7ade en verre unique.  La construction de cette tour remarquable ne n\xE9cessite
+      que 13 mois, s'\xE9talant de 1964 \xE0 1966. Cependant, sa construction est
+      l'\xE9l\xE9ment d\xE9clencheur de la norme I.G.H (Immeuble Grande Hauteur)
+      qui a pour but de r\xE9guler les constructions impactant les paysages urbains. 
+      D'une hauteur de 109 m\xE8tres pour 206 m\xE8tres en longueur, offrant ainsi
+      une superficie de 34,000 m\xB2, la Tour Initiale s'inspire de la Lever House
+      avec des angles arrondis emprunt\xE9s \xE0 la Tour Johnson \xE0 Racine. Pionni\xE8re
+      en France, elle introduit l'utilisation de vitres courbes sur chacune de ses
+      ar\xEAtes, n\xE9cessitant l'importation de ces \xE9l\xE9ments des \xC9tats-Unis.
+      Avec des fa\xE7ades dot\xE9es d'une double paroi et d'une circulation d'air,
+      la tour exp\xE9rimente un traitement thermique avant-gardiste pour l'\xE9poque.
+      Cette conception novatrice, caract\xE9ris\xE9e par un noyau en b\xE9ton et
+      une charpente m\xE9tallique, trouve ses origines dans les \xE9tudes de Jean
+      Prouv\xE9 pour un projet \xE0 Nancy et est concr\xE9tis\xE9e dans la r\xE9alisation
+      de la Tour Initiale."
+    isMonument: 1
+    isOeuvre: 0
+  - id: 5
+    name: Tour First
+    latitude: 48.88799
+    longitude: 2.250651
+    arObjectPrefab: {fileID: 0}
+    text: "La Tour First, \xE9galement nomm\xE9e CB 31 (Courbevoie/Bureaux 31), se
+      hisse en tant que plus haut gratte-ciel de France et occupe la septi\xE8me
+      place parmi les tours les plus \xE9lev\xE9es de l'Union europ\xE9enne. Construite
+      en 1974 sous le nom de Tour Azur, elle a \xE9t\xE9 con\xE7ue par l'architecte
+      Pierre Dufau pour l'Union des Assurances de Paris, construite par Bouygues. 
+      Mesurant initialement 159 m\xE8tres de hauteur avec 39 \xE9tages, elle adopte
+      un plan en \xE9toile \xE0 trois branches symbolisant la fusion de trois compagnies
+      d'assurances formant l'UAP. Rebaptis\xE9e Tour Axa en 1998 apr\xE8s l'absorption
+      de l'UAP par Axa, elle subit une transformation majeure entre 2007 et 2011
+      par le cabinet d'architectes am\xE9ricain Kohn Pedersen Fox Associates, atteignant
+      ainsi 231 m\xE8tres avec 52 \xE9tages.  \xC0 noter que sa position de plus
+      haut gratte-ciel de France pourrait \xEAtre d\xE9tr\xF4n\xE9e par la Tour The
+      Link, en construction et pr\xE9vue pour atteindre 242 m\xE8tres en 2025.  La
+      tour mesure 231 m de haut et est compos\xE9e de trois ailes dont une a \xE9t\xE9
+      \xE9cr\xEAt\xE9e pour cr\xE9er un d\xE9grad\xE9 sur dix niveaux. La moiti\xE9
+      de ses fa\xE7ades est de type double peau, permettant de r\xE9duire les besoins
+      de climatisation de moiti\xE9, ce qui lui a permis de recevoir la certification
+      \u201CNF b\xE2timent tertiaires haute qualit\xE9 environnementale\u201D et
+      d\u2019atteindre le niveau tr\xE8s haute performance \xE9nerg\xE9tique (thpe). 
+      Par ailleurs, il est dit qu\u2019il suffit de regarder de quelle couleur est
+      illumin\xE9e la tour pour conna\xEEtre la m\xE9t\xE9o du lendemain."
+    isMonument: 1
+    isOeuvre: 0
+  - id: 6
+    name: Tour Majunga
+    latitude: 48.889305
+    longitude: 2.245114
+    arObjectPrefab: {fileID: 0}
+    text: "La Tour Majunga est le r\xE9sultat d'un projet ambitieux dans le domaine
+      de l'architecture moderne. Les plans de cette tour ont \xE9t\xE9 con\xE7us
+      par l'architecte fran\xE7ais Jean-Paul Viguier, qui a voulu apporter une touche
+      contemporaine et distinctive au paysage urbain de La D\xE9fense. La construction
+      de la Tour Majunga a d\xE9but\xE9 en 2011 et s'est achev\xE9e en 2014.  Son
+      nom, emprunt\xE9 au malgache, \xE9voque le dynamisme d'un port, rappelant ainsi
+      les liens historiques entre la France et Madagascar. Cette tour de 195 m\xE8tres
+      de hauteur et 45 \xE9tages incarne l'innovation architecturale et la fonctionnalit\xE9,
+      tout en contribuant \xE0 la renomm\xE9e de La D\xE9fense en tant que quartier
+      d'affaires \xE0 la pointe de la modernit\xE9. La Tour Majunga fait partie int\xE9grante
+      de la trilogie de gratte-ciels, aux c\xF4t\xE9s des tours Alicante et Chassagne,
+      formant ainsi un ensemble harmonieux au c\u0153ur du paysage urbain parisien. 
+      Majunga est la 1re tour en France \xE0 disposer d'une loggia ou d'un balcon
+      offrant un acc\xE8s \xE0 l'ext\xE9rieur \xE0 chaque \xE9tage. La tour est \xE9galement
+      \xE9quip\xE9e d'ouvrants permettant d'acc\xE9der \xE0 l'air libre dans chaque
+      bureau. De plus, les plafonds \xE9lev\xE9s et les fa\xE7ades bioclimatiques
+      adapt\xE9es \xE0 l'orientation de la tour permettent de maximiser la p\xE9n\xE9tration
+      de la lumi\xE8re naturelle. Elle est aussi labellis\xE9e par diff\xE9rents
+      organismes comme un excellent par la BREEAM et HQE qui sont des organismes
+      qui \xE9valuent le comportement environnemental des b\xE2timents."
+    isMonument: 1
+    isOeuvre: 0
+  - id: 7
+    name: "Le Pouce de C\xE9sar"
+    latitude: 48.893486
+    longitude: 2.238599
+    arObjectPrefab: {fileID: 0}
+    text: "Le Pouce de C\xE9sar, une sculpture embl\xE9matique cr\xE9\xE9e par l'artiste
+      fran\xE7ais C\xE9sar Baldaccini, s'impose comme une \u0153uvre d'art exceptionnelle
+      au sein du paysage parisien. Inaugur\xE9e en 1965, cette sculpture monumentale
+      a rapidement captiv\xE9 l'attention des amateurs d'art et des passants. Situ\xE9e
+      au c\u0153ur du quartier d'affaires de La D\xE9fense, Le Pouce de C\xE9sar
+      devient une repr\xE9sentation saisissante du g\xE9nie cr\xE9atif de l'artiste. 
+      Cette sculpture audacieuse, mesurant pr\xE8s de 12 m\xE8tres de haut, repr\xE9sente
+      un pouce humain, celui de l\u2019artiste, agrandi de mani\xE8re spectaculaire.
+      Cr\xE9\xE9 \xE0 partir de multiples empreintes de pouces en bronze, ce chef-d'\u0153uvre
+      offre une perspective unique sur la forme et la fonction de cet \xE9l\xE9ment
+      anatomique. C\xE9sar a su donner \xE0 cette \u0153uvre une pr\xE9sence imposante
+      tout en conservant une pr\xE9cision anatomique captivante.  L'emplacement strat\xE9gique
+      de cette \u0153uvre, au croisement de l'art et de l'architecture moderne, en
+      fait un point focal du quartier de La D\xE9fense. En tant que symbole de la
+      cr\xE9ativit\xE9 et de l'expression artistique, Le Pouce de C\xE9sar t\xE9moigne
+      de l'impact de l'art dans l'espace public, invitant les spectateurs \xE0 r\xE9fl\xE9chir
+      sur la relation entre l'homme, l'art et l'environnement urbain. \xC0 travers
+      ses dimensions imposantes et son design novateur, cette sculpture reste une
+      ic\xF4ne qui continue d'inspirer et d'\xE9merveiller les g\xE9n\xE9rations
+      successives."
+    isMonument: 0
+    isOeuvre: 1
+  - id: 8
+    name: Le Moretti
+    latitude: 48.88889
+    longitude: 2.247857
+    arObjectPrefab: {fileID: 0}
+    text: "Aussi \xE9tonnant que cela soit, cette \u0153uvre, une chemin\xE9e d\xE9guis\xE9e
+      sign\xE9e Raymond Moretti, tr\xF4ne au c\u0153ur du quartier d'affaires parisien
+      depuis son inauguration en 1976. Mesurant pr\xE8s de 15 m\xE8tres de haut,
+      cette sculpture m\xE9tamorphos\xE9e dissimule une chemin\xE9e d'a\xE9ration
+      de 32 m\xE8tres. Utilisant ing\xE9nieusement 672 tubes de fibres de verre de
+      diff\xE9rents diam\xE8tres, l'artiste les a peints de 19 couleurs distinctes.
+      R\xE9sultat : un cache-chemin\xE9e imposant de 27.5 tonnes, constitu\xE9 de
+      22 kilom\xE8tres de tubes.  Chaque colonne, unique, offre une exp\xE9rience
+      visuelle riche. Inspir\xE9e du mouvement et de l'\xE9nergie, l'\u0153uvre \xE9voque
+      l'harmonie entre la rigueur architecturale et la cr\xE9ativit\xE9 artistique.
+      Strat\xE9giquement plac\xE9e au centre d'une esplanade, elle devient un point
+      de convergence, un rep\xE8re visuel au sein du quartier d'affaires anim\xE9. 
+      La nuit, cette chemin\xE9e d\xE9guis\xE9e s'illumine, projetant sur les immeubles
+      voisins ses diff\xE9rentes couleurs et ajoutant une dimension spectaculaire
+      \xE0 l'ensemble. Le Moretti de la D\xE9fense, bien plus qu'une sculpture, est
+      devenu une ic\xF4ne qui incarne la fusion r\xE9ussie de l'art contemporain
+      et de l'architecture moderne. \xC0 travers ses formes vibrantes, l'\u0153uvre
+      continue de fasciner et d'inspirer, soulignant l'importance de l'art dans la
+      vie quotidienne de cet espace urbain dynamique."
+    isMonument: 0
+    isOeuvre: 1
+  - id: 9
+    name: "La D\xE9fense de Paris"
+    latitude: 48.8902
+    longitude: 2.243267
+    arObjectPrefab: {fileID: 0}
+    text: "Au c\u0153ur de l'histoire du quartier de la D\xE9fense r\xE9side une
+      sculpture embl\xE9matique, autrefois tr\xF4nant sur le rond-point central de
+      Courbevoie, qui a donn\xE9 son nom m\xEAme \xE0 ce quartier dynamique. Initialement
+      \xE9rig\xE9e \xE0 cet endroit, la statue a \xE9t\xE9 retir\xE9e en 1971 lors
+      de travaux d'am\xE9nagement du quartier. Son importance est telle qu'elle est
+      \xE0 l'origine du nom m\xEAme de la D\xE9fense.  Cette \u0153uvre remarquable
+      a vu le jour gr\xE2ce \xE0 une commande de la ville de Paris lors d'un concours
+      visant \xE0 rendre hommage aux soldats et civils qui ont d\xE9fendu la capitale
+      pendant la guerre de 1970. L'artiste choisi pour cette t\xE2che cruciale \xE9tait
+      Louis-Ernest Barrias. Sa cr\xE9ation captivante d\xE9peint une femme v\xEAtue
+      de l'uniforme de la garde nationale, symbolisant la ville de Paris, aux c\xF4t\xE9s
+      d'un jeune homme pla\xE7ant une cartouche dans son fusil pour repr\xE9senter
+      les d\xE9fenseurs de la ville. Une fillette prostr\xE9e et triste compl\xE8te
+      le tableau, symbolisant la population civile ayant \xE9galement souffert des
+      ravages de la guerre. Bien que la statue a \xE9t\xE9 inaugur\xE9e en 1883,
+      son emplacement initial a \xE9t\xE9 d\xE9plac\xE9 \xE0 plusieurs reprises avant
+      de trouver sa place d\xE9finitive dans le quartier de la D\xE9fense.  Ainsi,
+      au-del\xE0 de son esth\xE9tique remarquable, cette sculpture \xE9voque une
+      p\xE9riode cl\xE9 de l'histoire de Paris et de la France, soulignant l'importance
+      de la m\xE9moire collective et de la comm\xE9moration dans l'espace urbain.
+      En tant que t\xE9moin silencieux du temps qui passe, la D\xE9fense de Paris
+      demeure une pi\xE8ce ma\xEEtresse du patrimoine artistique et culturel du quartier
+      \xE9ponyme, rappelant aux visiteurs et r\xE9sidents la richesse et la profondeur
+      de son h\xE9ritage."
+    isMonument: 0
+    isOeuvre: 1
+  - id: 10
+    name: La voiture lampadaire
+    latitude: 48.89247
+    longitude: 2.234004
+    arObjectPrefab: {fileID: 0}
+    text: "Dans le cadre de l'\xE9dition 2019 des Extatiques, une manifestation d'art
+      contemporain en plein air, l'artiste Benedetto Buffalino a cr\xE9\xE9 une \u0153uvre
+      d'art singuli\xE8re \xE0 partir d'une Peugeot 406 blanche. Loin d'\xEAtre une
+      simple voiture abandonn\xE9e par un conducteur maladroit, cette cr\xE9ation
+      artistique a \xE9t\xE9 con\xE7ue pour c\xE9l\xE9brer les 60 ans du quartier
+      de la D\xE9fense. L'installation \xE9tait initialement pr\xE9vue comme temporaire
+      pour l'exposition, mais en raison de son immense popularit\xE9 aupr\xE8s du
+      public, la d\xE9cision a \xE9t\xE9 prise de l'int\xE9grer de mani\xE8re permanente
+      dans le paysage du quartier.  Le 12 juin 2020, cette voiture artistique a \xE9t\xE9
+      officiellement relog\xE9e, devenant ainsi une pi\xE8ce incontournable du quartier
+      de la D\xE9fense. Ce projet, initi\xE9 dans le cadre des Extatiques, vise \xE0
+      transformer l'espace urbain en une galerie d'art \xE0 ciel ouvert, offrant
+      aux visiteurs une exp\xE9rience esth\xE9tique in\xE9dite.  Un d\xE9tail fascinant
+      \xE0 noter est que cette \u0153uvre d'art mobile n'est pas simplement une sculpture
+      statique. La Peugeot 406 fonctionne r\xE9ellement comme un lampadaire, ajoutant
+      une dimension fonctionnelle \xE0 sa pr\xE9sence artistique. Pendant la nuit,
+      l'int\xE9rieur de la voiture et ses phares s'allument, cr\xE9ant un spectacle
+      lumineux qui contribue \xE0 illuminer la ville et \xE0 offrir une atmosph\xE8re
+      unique au quartier de la D\xE9fense.  Ainsi, cette voiture transform\xE9e en
+      \u0153uvre d'art devient bien plus qu'un simple \xE9l\xE9ment visuel ; elle
+      repr\xE9sente une int\xE9gration r\xE9ussie de l'art contemporain dans l'environnement
+      urbain, t\xE9moignant de l'impact positif de l'expression artistique sur la
+      vie quotidienne et le paysage citadin."
+    isMonument: 0
+    isOeuvre: 1
+  - id: 11
+    name: Fragment du mur de Berlin
+    latitude: 48.891743
+    longitude: 2.242018
+    arObjectPrefab: {fileID: 0}
+    text: "Apr\xE8s la Seconde Guerre mondiale, l'Allemagne est divis\xE9e en deux
+      entit\xE9s distinctes : la R\xE9publique f\xE9d\xE9rale d'Allemagne (RFA) \xE0
+      l'ouest, influenc\xE9e par le capitalisme et la d\xE9mocratie, et la R\xE9publique
+      d\xE9mocratique allemande (RDA) \xE0 l'est, sous l'influence du communisme
+      sovi\xE9tique. Cette division s'\xE9tend jusqu'\xE0 la capitale, Berlin, qui
+      est \xE9galement partag\xE9e entre Berlin-Ouest, g\xE9r\xE9 par la RFA, et
+      Berlin-Est, par la RDA. Dans le but de s\xE9parer les deux r\xE9gimes et d'emp\xEAcher
+      les Berlinois de se rendre \xE0 l'ouest, la RDA \xE9rige un mur dans la nuit
+      du 12 au 13 ao\xFBt 1961. Initialement constitu\xE9 de barbel\xE9s, il \xE9volue
+      par la suite en un mur de b\xE9ton afin de rendre toute travers\xE9e impossible. 
+      Ce mur est bien plus qu'une simple barri\xE8re, il devient un dispositif militaire
+      complexe comprenant deux murs de 3,6 m\xE8tres de haut, entourant totalement
+      la partie ouest de la ville sur 155 km. Entre ces deux murs, on trouve 302
+      miradors, des dispositifs d'alarmes, 14 000 gardes, 600 chiens et des barbel\xE9s
+      surplombant la structure.  Cette fronti\xE8re infranchissable dure 28 ans.
+      Le 9 novembre 1989, avec l'affaiblissement de l'Union sovi\xE9tique, les Allemands
+      de l'Est, d\xE9termin\xE9s, organisent d'importantes manifestations et d\xE9truisent
+      une partie du mur pendant la nuit, permettant ainsi la r\xE9unification des
+      deux Allemagnes. Face \xE0 vous, ce fragment de mur, pr\xE9sentant les graffitis
+      d'\xE9poques du c\xF4t\xE9 de la RFA, mesure 20 m\xE8tres de long, 3.2 m\xE8tres
+      de large et 20 cm d'\xE9paisseur. Il fait partie des 12 autres fragments du
+      mur de Berlin dispers\xE9s en France, dont un se trouve sur l'esplanade du
+      Neuf-Novembre 1989 \xE0 Paris."
     isMonument: 0
     isOeuvre: 1
   arObjectContainer: {fileID: 0}
