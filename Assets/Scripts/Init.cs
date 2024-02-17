@@ -9,12 +9,12 @@ public class Init : MonoBehaviour
 
     public static Init Instance { get; private set; }
 
-    public int runningId = 2;
+    public int runningId = 1;
     public TextMeshProUGUI runningText;
     public List<int> runningList = new List<int>();
     public List<ARObjectData> dataList;
     public Transform arObjectContainer;
-    public float displayDistance = 100f; // Définir la distance à laquelle afficher le prefab
+    public float displayDistance = 50f; // Définir la distance à laquelle afficher le prefab
 
     public TextMeshProUGUI loc_text;
     public TextMeshProUGUI debug1;
@@ -236,8 +236,26 @@ public class Init : MonoBehaviour
             PlayerPrefs.SetFloat("Longitude", currentLongitude);
         }
 
+
+        ARObjectData arObject = dataList.Find(obj => obj.id == runningId);
+        if (arObject != null && IsTargetReached(arObject.latitude, arObject.longitude))
+        {
+            // Vérifier si l'objet avec runningId est déjà instancié
+            GameObject existingObject = GameObject.Find(arObject.name);
+            if (existingObject == null)
+            {
+                InstantiateARObject(arObject); // Instancier l'objet AR
+            }
+            /*else if (!IsInGPSRange(arObject.latitude, arObject.longitude)) // Vérifier si les coordonnées GPS actuelles sont hors de la plage
+            {
+                // Passer à l'ID suivant avec les fonctions du boutons
+                //UpdateRunningId();
+            }*/
+        }
+
+
         // from the currentId list 
-        if (runningList.Count > 0)
+        /*if (runningList.Count > 0)
         {
             for (int i = 0; i < runningList.Count; i++)
             {
@@ -255,7 +273,7 @@ public class Init : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
 
         // Vérifier pour chaque objet AR si la position est ok
         // foreach (ARObjectData arObjectData in dataList)
