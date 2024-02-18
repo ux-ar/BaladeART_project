@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Google.XR.ARCoreExtensions;
 using TMPro;
+//using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 #if UNITY_ANDROID
 using UnityEngine.Android;
@@ -12,8 +13,6 @@ using UnityEngine.XR.ARSubsystems;
 public class GeospatialManager : MonoBehaviour
 {
     [Header("Core Features")]
-    //[SerializeField]
-    //public TextMeshProUGUI geospatialStatusText;
 
     [SerializeField]
     public AREarthManager earthManager;
@@ -71,22 +70,7 @@ public class GeospatialManager : MonoBehaviour
             earthManager.CameraGeospatialPose : new GeospatialPose();
         var supported = earthManager.IsGeospatialModeSupported(GeospatialMode.Enabled);
 
-/*
-        if(geospatialStatusText != null)
-        {
-            geospatialStatusText.text =
-                $"SessionState: {ARSession.state}\n" +
-                $"LocationServiceStatus: {Input.location.status}\n" +
-                $"FeatureSupported: {supported}\n" +
-                $"EarthState: {earthManager.EarthState}\n" +
-                $"EarthTrackingState: {earthManager.EarthTrackingState}\n" +
-                $"  LAT/LNG: {pose.Latitude:F6}, {pose.Longitude:F6}\n" +
-                $"  HorizontalAcc: {pose.HorizontalAccuracy:F6}\n" +
-                $"  ALT: {pose.Altitude:F2}\n" +
-                $"  VerticalAcc: {pose.VerticalAccuracy:F2}\n" +
-                $"  EunRotation: {pose.EunRotation:F2}\n" +
-                $"  OrientationYawAcc: {pose.OrientationYawAccuracy:F2}";
-        }*/
+
     }
 
     private void OnEnable()

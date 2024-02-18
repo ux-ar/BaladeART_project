@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -457,42 +457,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ECEF:
-    x: 4205906.016683742
-    y: 186596.6923451337
-    z: 4775391.604792599
+    x: 4205905.825823185
+    y: 186596.6838765017
+    z: 4775391.386646349
   EUN:
     x: -22.6200008392334
-    y: -663.77001953125
+    y: -664.0599975585938
     z: 254.57000732421875
   EUS:
     x: -22.6200008392334
-    y: -663.77001953125
+    y: -664.0599975585938
     z: -254.57000732421875
   shouldPosition: 1
-  AltType: 0
-  _latitude: 48.79102908396451
-  _longitude: 2.540284237236015
-  _altitude: 147.65114474340024
+  AltType: 1
+  _latitude: 48.7910290840687
+  _longitude: 2.540284237222045
+  _altitude: 147.36116671627656
   _altitudeOffset: 0
   _geoRefLatitude: 48.788739955418286
   _geoRefLongitude: 2.5405920798207755
   _geoRefHeight: 811.416038842827
---- !u!4 &111478460
-Transform:
+--- !u!224 &111478460
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111478458}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.62, y: -663.77, z: 254.57}
+  m_LocalPosition: {x: 0, y: 0, z: 254.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1561198382}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -22.62, y: -664.06}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &118521606
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +683,7 @@ GameObject:
   - component: {fileID: 138336791}
   - component: {fileID: 138336790}
   - component: {fileID: 138336795}
-  - component: {fileID: 138336798}
+  - component: {fileID: 138336796}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -849,7 +853,7 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &138336798
+--- !u!114 &138336796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -861,39 +865,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e7e966e02ca874081fb5ed0fd40fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runningId: 1
+  runningId: 0
   runningText: {fileID: 32983792}
   runningList: 
-  dataList:
-  - id: 1
-    name: Nathan
-    latitude: 48.79102
-    longitude: 2.53945
-    arObjectPrefab: {fileID: 8203368213194381562, guid: 0dc861abfc797f0439d92ca2d2405a60,
-      type: 3}
-    text: ceci est une voiture
-    isMonument: 1
-    isOeuvre: 0
-  - id: 2
-    name: "M\xE9lanie"
-    latitude: 48.79092
-    longitude: 2.540547
-    arObjectPrefab: {fileID: 3105421940826370142, guid: d92f69688094fb64eaef83aa95f7edcb,
-      type: 3}
-    text: ceci est une tour, la tour majunga
-    isMonument: 1
-    isOeuvre: 0
-  - id: 3
-    name: Emma
-    latitude: 48.79031
-    longitude: 2.540401
-    arObjectPrefab: {fileID: 8519026964063057337, guid: 356c8a29c473ce249bca63e3f8d36ecc,
-      type: 3}
-    text: 'Ave Cesar ! '
-    isMonument: 0
-    isOeuvre: 1
+  dataList: []
   arObjectContainer: {fileID: 626376965}
-  displayDistance: 50
   loc_text: {fileID: 327153960}
   debug1: {fileID: 1078228947}
   debug2: {fileID: 1178710856}
@@ -6140,6 +6116,117 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324676504}
   m_CullTransparentMesh: 1
+--- !u!1001 &1408973455
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -662.0896
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 280.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99905723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.043412242
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -4.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499716452593103178, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277625720172620784, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      propertyPath: m_Name
+      value: peugeot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2277625720172620784, guid: 8887f3773f0c51f4586af0965cab2138,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1408973457}
+  m_SourcePrefab: {fileID: 100100000, guid: 8887f3773f0c51f4586af0965cab2138, type: 3}
+--- !u!1 &1408973456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2277625720172620784, guid: 8887f3773f0c51f4586af0965cab2138,
+    type: 3}
+  m_PrefabInstance: {fileID: 1408973455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1408973457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408973456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3d0e3f52dfe4243aceaba16f9cd0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ECEF:
+    x: 4205886.402765678
+    y: 186616.8627426462
+    z: 4775410.216125722
+  EUN:
+    x: -1.600000023841858
+    y: -662.089599609375
+    z: 280.8999938964844
+  EUS:
+    x: -1.600000023841858
+    y: -662.089599609375
+    z: -280.8999938964844
+  shouldPosition: 1
+  AltType: 1
+  _latitude: 48.791265846560925
+  _longitude: 2.5405703048290635
+  _altitude: 149.33263119049346
+  _altitudeOffset: 0
+  _geoRefLatitude: 48.788739955418286
+  _geoRefLongitude: 2.5405920798207755
+  _geoRefHeight: 811.416038842827
 --- !u!1 &1421325977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7911,7 +7998,6 @@ MonoBehaviour:
   runningList: 
   dataList: []
   arObjectContainer: {fileID: 0}
-  displayDistance: 10
   loc_text: {fileID: 0}
   debug1: {fileID: 0}
   debug2: {fileID: 0}
@@ -8203,6 +8289,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earthManager: {fileID: 1125729856}
   arcoreExtensions: {fileID: 1792482401}
+  dataList: []
+  popupTitle: {fileID: 1853045651}
+  popupText: {fileID: 1901006404}
   waitingForLocationService: 0
 --- !u!4 &1812910245
 Transform:
@@ -8467,7 +8556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Arche de la Def '
+  m_text: txt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8727,18 +8816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\u2019Arche vient d\u2019une id\xE9e de Georges Pompidou, qui voulait
-    cr\xE9er une \u0153uvre sur le grand axe parisien reliant l\u2019arc de triomphe,
-    l\u2019obelisque, les tuileries et le louvre . Plus tard, le pr\xE9sident Val\xE9ry
-    Giscard d\u2019Estaing revient sur cette id\xE9e et d\xE9cide d\u2019organiser
-    un concours pour cr\xE9er l\u2019\u0153uvre. \n\nMais lorsque Fran\xE7ois Mitterrand
-    devient pr\xE9sident, il relance le concours avec pour nom \xAB T\xEAte D\xE9fense
-    \xBB. C\u2019est l\u2019architecte danois Johan Otto von Spreckelsen accompagn\xE9
-    de l\u2019ing\xE9nieur fran\xE7ais Erik Reitzel qui gagnent ce concours en 1985
-    en proposant la grande arche. \n\nSon inauguration a eu lieu en juillet 1989,
-    pour f\xEAter les 100 ans de la tour Eiffel et 200 ans de la r\xE9volution fran\xE7aise.
-    Aujourd\u2019hui, la grande Arche abrite des locaux de grandes entreprise et
-    il n\u2019est malheureusement plus possible\_de\_la\_visiter. \n"
+  m_text: txt
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9221,13 +9299,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994308985}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.54111916, z: -0, w: 0.8409459}
-  m_LocalPosition: {x: -1.36, y: -662.65, z: 240.13}
+  m_LocalRotation: {x: -0, y: 0.1353343, z: -0, w: 0.9908}
+  m_LocalPosition: {x: -81.4, y: -662.65, z: 263.7}
   m_LocalScale: {x: 4.6388307, y: 2.120236, z: 1.8388864}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 65.52, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 15.556, z: 0}
 --- !u!114 &1994308990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9241,22 +9319,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ECEF:
-    x: 4205916.663783478
-    y: 186618.4456837839
-    z: 4775382.933736178
+    x: 4205902.497785305
+    y: 186537.69837458705
+    z: 4775398.462536532
   EUN:
-    x: -1.3600000143051147
+    x: -81.4000015258789
     y: -662.6500244140625
-    z: 240.1300048828125
+    z: 263.70001220703125
   EUS:
-    x: -1.3600000143051147
+    x: -81.4000015258789
     y: -662.6500244140625
-    z: -240.1300048828125
+    z: -263.70001220703125
   shouldPosition: 1
   AltType: 1
-  _latitude: 48.79089923750627
-  _longitude: 2.540573571211116
-  _altitude: 148.77053941433152
+  _latitude: 48.791111176893615
+  _longitude: 2.5394842804208806
+  _altitude: 148.7719895689197
   _altitudeOffset: 0
   _geoRefLatitude: 48.788739955418286
   _geoRefLongitude: 2.5405920798207755
@@ -9633,7 +9711,8 @@ SceneRoots:
   - {fileID: 609741781}
   - {fileID: 1524876845}
   - {fileID: 464576802}
-  - {fileID: 1994308989}
   - {fileID: 1792482402}
   - {fileID: 1812910245}
+  - {fileID: 1994308989}
+  - {fileID: 1408973455}
   - {fileID: 111478460}

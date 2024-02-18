@@ -9,12 +9,13 @@ public class Init : MonoBehaviour
 
     public static Init Instance { get; private set; }
 
-    public int runningId = 1;
+    public int runningId = 0;
     public TextMeshProUGUI runningText;
     public List<int> runningList = new List<int>();
-    public List<ARObjectData> dataList;
+    public List<ARObjectData> dataList = new List<ARObjectData>();   
+
     public Transform arObjectContainer;
-    public float displayDistance = 50f; // Définir la distance à laquelle afficher le prefab
+    //public float displayDistance = 50f; // Définir la distance à laquelle afficher le prefab
 
     public TextMeshProUGUI loc_text;
     public TextMeshProUGUI debug1;
@@ -222,6 +223,13 @@ public class Init : MonoBehaviour
         }
     }
 
+    public void UpdatePopupId(int id)
+    {
+        popupTitle.text = dataList[id].name;
+        popupText.text = dataList[id].text;
+    }
+
+
     public void UpdateGps()
     {
         if (Input.location.status == LocationServiceStatus.Running)
@@ -237,7 +245,20 @@ public class Init : MonoBehaviour
         }
 
 
-        ARObjectData arObject = dataList.Find(obj => obj.id == runningId);
+        foreach (ARObjectData arObjectData in dataList)
+        {
+            if (IsTargetReached(arObjectData.MinLatitude, arObjectData.MaxLatitude, arObjectData.MinLongitude, arObjectData.MaxLongitude))
+            {
+                UpdatePopup();
+                break;
+                //InstantiateARObject(arObjectData); // Instancier l'objet AR
+            }
+        }
+
+
+
+
+        /*ARObjectData arObject = dataList.Find(obj => obj.id == runningId);
         if (arObject != null && IsTargetReached(arObject.latitude, arObject.longitude))
         {
             // Vérifier si l'objet avec runningId est déjà instancié
@@ -250,8 +271,8 @@ public class Init : MonoBehaviour
             {
                 // Passer à l'ID suivant avec les fonctions du boutons
                 //UpdateRunningId();
-            }*/
-        }
+            }
+        }*/
 
 
         // from the currentId list 
@@ -285,13 +306,25 @@ public class Init : MonoBehaviour
         // }
     }
 
-    private bool IsTargetReached(float targetLatitude, float targetLongitude)
+    private bool IsTargetReached(float minLatitude, float maxLatitude, float mintLongitude, float maxLongitude)
     {
-        float errorMargin = 10f;
-        return Mathf.Abs(currentLatitude - targetLatitude) < errorMargin && Mathf.Abs(currentLongitude - targetLongitude) < errorMargin;
+        bool targetReached;
+        if(currentLatitude>= minLatitude && currentLatitude<=maxLatitude && currentLongitude>=mintLongitude && currentLongitude<=maxLongitude)
+        {
+            targetReached = true;
+        }
+
+        else {
+            targetReached=false;
+        }
+
+        return targetReached;
+        //float errorMargin = 10f;
+        //return Mathf.Abs(currentLatitude - targetLatitude) < errorMargin && Mathf.Abs(currentLongitude - targetLongitude) < errorMargin;
     }
 
-    private void InstantiateARObject(ARObjectData arObjectData)
+
+/*    private void InstantiateARObject(ARObjectData arObjectData)
     {
         // Utiliser les coordonnées géographiques pour déterminer la position
         Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
@@ -305,23 +338,29 @@ public class Init : MonoBehaviour
             // Instancier l'objet AR à la position calculée
             Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
         }
-    }
+    }*/
 
-    private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
+    /*private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
     {
         // Utiliser directement les latitudes et longitudes sans conversion en unités de distance
-        float latitudeScale = 1f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
-        float longitudeScale = 1f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
+        float latitudeScale = 10000f; // Échelle de latitude (1 degré de latitude = 1 unité de distance Unity)
+        float longitudeScale = 10000f; // Échelle de longitude (1 degré de longitude = 1 unité de distance Unity)
 
         float x = (targetLongitude - currentLongitude) * longitudeScale;
         float z = (targetLatitude - currentLatitude) * latitudeScale;
 
         return new Vector3(x, 0, z);
-    }
+    }*/
 
 
     public void defineList()
     {
+        dataList.Add(new ARObjectData(0, "Cube", 48.791062621759046f, 48.791156135331633f, 2.5391726287614622f, 2.5392719706082123f, 
+        "quel beau cube que nous avons là, même si je sais, ce n'est pas un cube :3", false, true ));
+        dataList.Add(new ARObjectData(1, "Jules César", 48.791008941879753f, 48.791050574612846f, 2.5401281372544005f, 2.5401281394288908f,
+        "ceci est une statue de jules cesar", false, true ));
+        
+
         // check what is selected from the homepage
         bool monument = PlayerPrefs.GetInt("Monuments") == 1;
         bool oeuvre = PlayerPrefs.GetInt("Oeuvres") == 1;
