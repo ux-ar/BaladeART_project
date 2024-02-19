@@ -4,37 +4,45 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System;
+using TMPro;
 
 public class Map : MonoBehaviour
 {
+    public TextMeshProUGUI debugText;
     public string apiKey;
     public string FakeApiKey;
-    public float lat = 48.892085864409815f;
-    public float lon = 2.235504196336084f;
-    public int zoom = 24;
+    public float lat = 48.8911f;
+    public float lon = 2.239604f;
+    public int zoom = 15;
     public enum resolution { low = 1, high = 2 };
     public resolution mapResolution = resolution.low;
     public enum type { roadmap, satellite, gybrid, terrain };
     public type mapType = type.roadmap;
     private string url = "";
-    private int mapWidth = 1000;//640
-    private int mapHeight = 1400;//640
+    private int mapWidth = 1500;//640
+    private int mapHeight = 1500;//640
     private bool mapIsLoading = false; //not used. Can be used to know that the map is loading 
     private Rect rect;
 
     private string apiKeyLast;
-    private float latLast = 48.892085864409815f;
-    private float lonLast = 2.235504196336084f;
-    private int zoomLast = 14;
+    private float latLast = 0f;
+    private float lonLast = 0f;
+    private int zoomLast = 0;
     private resolution mapResolutionLast = resolution.low;
     private type mapTypeLast = type.roadmap;
     private bool updateMap = true;
 
+    public string debugLast;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Update Map " + PlayerPrefs.GetFloat("Latitude").ToString() + " " + PlayerPrefs.GetFloat("Longitude").ToString());
+        PlayerPrefs.SetFloat("Latitude", 48.842590f);
+        PlayerPrefs.SetFloat("Longitude", 2.285840f);
+
+        debugLast = "Update Map " + PlayerPrefs.GetFloat("Latitude").ToString() + " " + PlayerPrefs.GetFloat("Longitude").ToString() + " last lat " + latLast.ToString() + " zoom " + zoomLast.ToString();
+        Debug.Log(debugLast);
+        debugText.text = debugLast;
         StartCoroutine(GetGoogleMap());
         rect = gameObject.GetComponent<RawImage>().rectTransform.rect;
         mapWidth = (int)Math.Round(rect.width);
@@ -44,6 +52,7 @@ public class Map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (updateMap && (apiKeyLast != apiKey || !Mathf.Approximately(latLast, lat) || !Mathf.Approximately(lonLast, lon) || zoomLast != zoom || mapResolutionLast != mapResolution || mapTypeLast != mapType))
         {
             Debug.Log("Update Map " + PlayerPrefs.GetFloat("Latitude").ToString() + " " + PlayerPrefs.GetFloat("Longitude").ToString());
@@ -53,6 +62,10 @@ public class Map : MonoBehaviour
             StartCoroutine(GetGoogleMap());
             updateMap = false;
         }
+
+        debugLast = "Update Map " + PlayerPrefs.GetFloat("Latitude").ToString() + " " + PlayerPrefs.GetFloat("Longitude").ToString() + " last lat " + latLast.ToString() + " zoom " + zoomLast.ToString();
+        Debug.Log(debugLast);
+        debugText.text = debugLast;
     }
 
 
@@ -78,7 +91,7 @@ public class Map : MonoBehaviour
 
         url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
               "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + mapResolution +
-              "&maptype=" + mapType + "&key=" + apiKey + "&" + markers + path;
+              "&maptype=" + mapType + "&key=" + apiKey + "&" + markers;
 
         mapIsLoading = true;
         UnityWebRequest www = UnityWebRequestTexture.GetTexture(url);
@@ -94,8 +107,8 @@ public class Map : MonoBehaviour
             gameObject.GetComponent<RawImage>().texture = ((DownloadHandlerTexture)www.downloadHandler).texture;
 
             apiKeyLast = apiKey;
-            latLast = lat;
-            lonLast = lon;
+            latLast = PlayerPrefs.GetFloat("Latitude"); //lat;
+            lonLast = PlayerPrefs.GetFloat("Longitude"); // lon;
             zoomLast = zoom;
             mapResolutionLast = mapResolution;
             mapTypeLast = mapType;
