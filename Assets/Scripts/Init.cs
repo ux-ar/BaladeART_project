@@ -147,6 +147,31 @@ public class Init : MonoBehaviour
     {
         PlayerPrefs.SetInt("RunningId", id);
     }
+    public List<float> GetObjectLocation(int id)
+    {
+        List<float> location = new List<float>();
+        for (int i = 0; i < dataList.Count; i++)
+        {
+            if (id == dataList[i].id)
+            {
+                location.Add(dataList[i].latitude);
+                location.Add(dataList[i].longitude);
+            }
+        }
+        return location;
+    }
+    public List<List<float>> GetFullObjectLocation()
+    {
+        List<List<float>> location = new List<List<float>>();
+        for (int i = 0; i < dataList.Count; i++)
+        {
+            List<float> temp = new List<float>();
+            temp.Add(dataList[i].latitude);
+            temp.Add(dataList[i].longitude);
+            location.Add(temp);
+        }
+        return location;
+    }
     public bool CheckRunningId(int runningId, bool isNext)
     {
         //List<string> listString = new List<string>(PlayerPrefs.GetString("RunningList").Split(','));

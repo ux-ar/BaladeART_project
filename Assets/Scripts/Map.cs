@@ -71,8 +71,10 @@ public class Map : MonoBehaviour
 
     IEnumerator GetGoogleMap()
     {
+
+        //for (int i = 0; i < )
         // Construct the URL with markers and path
-        string markers = "markers=color:yellow%7Clabel:M%7C" + lat + "," + lon +
+        string markers = "markers=color:yellow%7Clabel:M%7C" + latLast + "," + lonLast +
                          "&markers=color:blue%7Clabel:B%7C48.89236030157794,2.2339412677534805" +
                          "&markers=color:blue%7Clabel:B%7C48.89353003365533,2.2387619275749735" +
                          "&markers=color:blue%7Clabel:B%7C48.89180299042522,2.2420075139993325" +
@@ -83,13 +85,13 @@ public class Map : MonoBehaviour
                          "&markers=color:purple%7Clabel:A%7C48.88704159194323,2.2514163837831633" +
                          "&markers=color:purple%7Clabel:A%7C48.89285130303518,2.239514768441741";
 
-        string path = "&path=color:0x0000ff|weight:5|" + lat + "," + lon + "|48.89236030157794,2.2339412677534805|" +
+        string path = "&path=color:0x0000ff|weight:5|" + latLast + "," + lonLast + "|48.89236030157794,2.2339412677534805|" +
                       "48.89353003365533,2.2387619275749735|48.89180299042522,2.2420075139993325|" +
                       "48.88912780661263,2.247817853100024|48.890431636837846,2.2432611842323156|" +
                       "48.88855573411807,2.242098775057336|48.88889626132014,2.2518710261124295|" +
                       "48.88704159194323,2.2514163837831633|48.89285130303518,2.239514768441741";
 
-        url = "https://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon +
+        url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latLast + "," + lonLast +
               "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + mapResolution +
               "&maptype=" + mapType + "&key=" + apiKey + "&" + markers;
 
