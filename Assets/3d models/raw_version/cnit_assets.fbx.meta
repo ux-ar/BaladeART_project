@@ -1,54 +1,9 @@
 fileFormatVersion: 2
-guid: a7391d464b34a6a44b2339dd7dc105e0
+guid: 3a55eeffdd0f5a54db1d6d32a1f9cc39
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black
-    second: {fileID: 2100000, guid: cd1f521bc0e2eff48909214250a1c048, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black.001
-    second: {fileID: 2100000, guid: 7ee832b9a3227494aaf122b38b25ac68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Drill
-    second: {fileID: 2100000, guid: 8f74f624df452cf448296fe2f204c549, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eye_Exterior
-    second: {fileID: 2100000, guid: 2ea24e6b6547b9c439ac0d652efc2e5b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eye_Inside
-    second: {fileID: 2100000, guid: b95e918d83f3ecf46894a1cac857a151, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange
-    second: {fileID: 2100000, guid: a8824ec3ea9ec1f4c8d119730cf73e50, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange.001
-    second: {fileID: 2100000, guid: 923f7a7c360fcb040ac64757094c70fe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Robot_Mat
-    second: {fileID: 2100000, guid: a0b1293090f38dc4ebb9b4153f5a0c78, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Steel
-    second: {fileID: 2100000, guid: 2641a43c08721dc42983bbddabae3075, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
