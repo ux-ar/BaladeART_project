@@ -155,8 +155,8 @@ public class Init : MonoBehaviour
         {
             if (id == dataList[i].id)
             {
-                location.Add(dataList[i].latitude);
-                location.Add(dataList[i].longitude);
+                location.Add(dataList[i].minLatitude);
+                location.Add(dataList[i].minLongitude);
             }
         }
         return location;
@@ -167,8 +167,8 @@ public class Init : MonoBehaviour
         for (int i = 0; i < dataList.Count; i++)
         {
             List<float> temp = new List<float>();
-            temp.Add(dataList[i].latitude);
-            temp.Add(dataList[i].longitude);
+            temp.Add(dataList[i].minLatitude);
+            temp.Add(dataList[i].minLongitude);
             location.Add(temp);
         }
         return location;

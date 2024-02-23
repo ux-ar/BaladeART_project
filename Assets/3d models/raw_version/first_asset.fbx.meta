@@ -1,49 +1,9 @@
 fileFormatVersion: 2
-guid: 3ff52c550bd96904297ebc22cccbccac
+guid: 02f17fdf6ccdeff4bb0b7a45f43193db
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 2e5d07201a5199b46954585332efe72d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Star_Texture_.003
-    second: {fileID: 2100000, guid: 5d96fcf8e7b268247b51061fd47293a6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: _1
-    second: {fileID: 2100000, guid: bd5b8ea72eabbd747bb932d8b78dac48, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: _4
-    second: {fileID: 2100000, guid: 8cbfda052e3d95748879ede108adce9d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: _9
-    second: {fileID: 2100000, guid: 1511755bd63e65b42ab1ecee5e4dde32, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cb31 2
-    second: {fileID: 2800000, guid: 27cf871d18703c742917a0528618d003, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cb31 3
-    second: {fileID: 2800000, guid: ceff59593f2794d4ea59d5248153d10c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cb31 8
-    second: {fileID: 2800000, guid: 898b42ff236a6c741ac034840da5bcaf, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
