@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.cesium.unity": "file:C:/Users/melxh/Dropbox/Mon PC (DESKTOP-FTG9J2T)/Downloads/com.cesium.unity-1.7.1.tgz",
+    "com.cesium.unity": "file:C:/Users/ntack/OneDrive - De Vinci/Esilv/A4S7_OCC2/UXD/projet/Unity/com.cesium.unity-1.7.1/package",
     "com.google.ar.core.arfoundation.extensions": "1.37.0",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.collab-proxy": "2.2.0",

@@ -12,7 +12,7 @@ public class Init : MonoBehaviour
     public int runningId = 0;
     public TextMeshProUGUI runningText;
     public List<int> runningList = new List<int>();
-    public List<ARObjectData> dataList = new List<ARObjectData>();   
+    public List<ARObjectData> dataList = new List<ARObjectData>();
 
     public Transform arObjectContainer;
     //public float displayDistance = 50f; // Définir la distance à laquelle afficher le prefab
@@ -155,8 +155,8 @@ public class Init : MonoBehaviour
         {
             if (id == dataList[i].id)
             {
-                location.Add(dataList[i].latitude);
-                location.Add(dataList[i].longitude);
+                location.Add(dataList[i].minLatitude);//latitude
+                location.Add(dataList[i].minLongitude);//longitude
             }
         }
         return location;
@@ -167,8 +167,8 @@ public class Init : MonoBehaviour
         for (int i = 0; i < dataList.Count; i++)
         {
             List<float> temp = new List<float>();
-            temp.Add(dataList[i].latitude);
-            temp.Add(dataList[i].longitude);
+            temp.Add(dataList[i].minLatitude);//latitude
+            temp.Add(dataList[i].minLongitude);//longitude
             location.Add(temp);
         }
         return location;
@@ -334,13 +334,14 @@ public class Init : MonoBehaviour
     private bool IsTargetReached(float minLatitude, float maxLatitude, float mintLongitude, float maxLongitude)
     {
         bool targetReached;
-        if(currentLatitude>= minLatitude && currentLatitude<=maxLatitude && currentLongitude>=mintLongitude && currentLongitude<=maxLongitude)
+        if (currentLatitude >= minLatitude && currentLatitude <= maxLatitude && currentLongitude >= mintLongitude && currentLongitude <= maxLongitude)
         {
             targetReached = true;
         }
 
-        else {
-            targetReached=false;
+        else
+        {
+            targetReached = false;
         }
 
         return targetReached;
@@ -349,21 +350,21 @@ public class Init : MonoBehaviour
     }
 
 
-/*    private void InstantiateARObject(ARObjectData arObjectData)
-    {
-        // Utiliser les coordonnées géographiques pour déterminer la position
-        Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
-
-        // Vérifier la distance entre la position actuelle et la position cible
-        float distance = Vector3.Distance(transform.position, position);
-
-        // Si la distance est inférieure ou égale à la distance de visualisation spécifiée, alors instancier l'objet AR
-        if (distance <= displayDistance)
+    /*    private void InstantiateARObject(ARObjectData arObjectData)
         {
-            // Instancier l'objet AR à la position calculée
-            Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
-        }
-    }*/
+            // Utiliser les coordonnées géographiques pour déterminer la position
+            Vector3 position = GetARObjectPosition(arObjectData.latitude, arObjectData.longitude);
+
+            // Vérifier la distance entre la position actuelle et la position cible
+            float distance = Vector3.Distance(transform.position, position);
+
+            // Si la distance est inférieure ou égale à la distance de visualisation spécifiée, alors instancier l'objet AR
+            if (distance <= displayDistance)
+            {
+                // Instancier l'objet AR à la position calculée
+                Instantiate(arObjectData.arObjectPrefab, position, Quaternion.identity, arObjectContainer);
+            }
+        }*/
 
     /*private Vector3 GetARObjectPosition(float targetLatitude, float targetLongitude)
     {
@@ -380,11 +381,11 @@ public class Init : MonoBehaviour
 
     public void defineList()
     {
-        dataList.Add(new ARObjectData(0, "Cube", 48.791062621759046f, 48.791156135331633f, 2.5391726287614622f, 2.5392719706082123f, 
-        "quel beau cube que nous avons là, même si je sais, ce n'est pas un cube :3", false, true ));
+        dataList.Add(new ARObjectData(0, "Cube", 48.791062621759046f, 48.791156135331633f, 2.5391726287614622f, 2.5392719706082123f,
+        "quel beau cube que nous avons là, même si je sais, ce n'est pas un cube :3", false, true));
         dataList.Add(new ARObjectData(1, "Jules César", 48.791008941879753f, 48.791050574612846f, 2.5401281372544005f, 2.5401281394288908f,
-        "ceci est une statue de jules cesar", false, true ));
-        
+        "ceci est une statue de jules cesar", false, true));
+
 
         // check what is selected from the homepage
         bool monument = PlayerPrefs.GetInt("Monuments") == 1;

@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.cesium.unity": {
-      "version": "file:C:/Users/melxh/Dropbox/Mon PC (DESKTOP-FTG9J2T)/Downloads/com.cesium.unity-1.7.1.tgz",
+      "version": "file:C:/Users/ntack/OneDrive - De Vinci/Esilv/A4S7_OCC2/UXD/projet/Unity/com.cesium.unity-1.7.1/package",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "local",
       "dependencies": {
         "com.unity.mathematics": "1.2.0",
         "com.unity.test-framework": "1.1.31",
