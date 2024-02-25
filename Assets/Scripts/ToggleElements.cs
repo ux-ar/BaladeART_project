@@ -79,13 +79,20 @@ public class Toggle_element : MonoBehaviour
     void Start()
     {
         //Debug.Log("toggle oeuvres " + PlayerPrefs.GetInt("Oeuvres").ToString());
-        // PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
-        // PlayerPrefs.SetInt("Oeuvres", toggle_oeuvres.isOn == true ? 1 : 0);
+        //PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+        //PlayerPrefs.SetInt("Oeuvres", toggle_oeuvres.isOn == true ? 1 : 0);
 
 
-        distance_value = distance_monuments + distance_oeuvres;
-        time_value = time_monuments + time_oeuvres;
-        elevation_value = elevation_monuments + elevation_oeuvres;
+        //distance_value = distance_monuments + distance_oeuvres;
+        //time_value = time_monuments + time_oeuvres;
+        //elevation_value = elevation_monuments + elevation_oeuvres;
+
+        PlayerPrefs.SetInt("Distance", 0);
+        PlayerPrefs.SetInt("Time", 0);
+        PlayerPrefs.SetInt("Elevation", 0);
+
+        PlayerPrefs.SetInt("Monuments", 0);
+        PlayerPrefs.SetInt("Oeuvres", 0);
 
         if (PlayerPrefs.GetInt("Distance") != null)
         {
@@ -93,7 +100,7 @@ public class Toggle_element : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Distance", distance_value);
+            PlayerPrefs.SetInt("Distance", 0);// distance_value);
         }
 
 
@@ -104,7 +111,8 @@ public class Toggle_element : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+            //PlayerPrefs.SetInt("Monuments", toggle_monuments.isOn == true ? 1 : 0);
+            PlayerPrefs.SetInt("Monuments", 0);
         }
 
         if (PlayerPrefs.GetInt("Oeuvres") != null)
@@ -113,7 +121,8 @@ public class Toggle_element : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("Ouvres", toggle_oeuvres.isOn == true ? 1 : 0);
+            //PlayerPrefs.SetInt("Ouvres", toggle_oeuvres.isOn == true ? 1 : 0);
+            PlayerPrefs.SetInt("Ouvres", 0);
         }
 
 
