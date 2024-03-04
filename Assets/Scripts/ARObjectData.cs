@@ -11,11 +11,13 @@ public class ARObjectData
     public float maxLatitude;
     public float minLongitude;
     public float maxLongitude;
+    public string question;
     public string text;
     public bool isMonument;
-    public bool isOeuvre;  
+    public bool isOeuvre;
 
-    public ARObjectData(int id, string name, float minLatitude, float maxLatitude, float minLongitude, float maxLongitude, string text, bool isMonument, bool isOeuvre){
+    public ARObjectData(int id, string name, float minLatitude, float maxLatitude, float minLongitude, float maxLongitude, string text, bool isMonument, bool isOeuvre)
+    {
         this.id = id;
         this.name = name;
         this.minLatitude = minLatitude;
